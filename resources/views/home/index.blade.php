@@ -1,7 +1,7 @@
-
 @extends("plantilla")
 
 @section("main")
+
     <link rel="stylesheet" href="/css/style.css">
 <div class="contenedor">
 

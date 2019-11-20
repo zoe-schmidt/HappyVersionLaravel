@@ -12,6 +12,16 @@
 */
 
 
+
+Route::get('/', "HomeController@irAHome");
+
+Route::get('/contacto',"HomeController@irAContacto");
+
+Route::get("/faq","HomeController@irAFaq");
+
+Route::post('/irAGastronomia', "HomeController@irAGastronomia");
+
+
 Route::get('/registrate', function () {
     return view('registrate');
 });
@@ -20,9 +30,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/', "HomeController@irAHome");
-
-Route::post('/irAGastronomia', "HomeController@irAGastronomia");
 
 Route::get('/carrito', function () {
     return view('carrito');
