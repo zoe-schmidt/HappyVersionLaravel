@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+
+.contenedor{
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*cuerpo principal*/
+
+
+body{
+  background-color: #ebebeb;
+}
+
+.menu-mobile{
+  background-color: #45454d;
+}
+
+.lista-mobile {
+  text-align: center;
+  border-bottom: 1px solid, white;
+
+}
+
+.lista-mobile li{
+  border-bottom: 1px solid white;
+}
+
+.lista-mobile a{
+  color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
+main{
+    margin-top: 2px;
+}
+.busqueda{
+    overflow: hidden;
+    position: center;
+}
+
+.lupa{
+    float: right;
+    margin-top: 2px;
+    margin-left: 7px;
+    
+}
+form{
+    float: left;
+    width: 90%;
+    margin-left: 7px;
+}
+
+input.buscar{
+    float: left;
+    width: 100%;
+    text-align: center;
+    -webkit-appearance: button;
+    font-family: 'Comfortaa', cursive;
+}
+
+div .happy {
+    font-family: 'Comfortaa', cursive;
+    background-color: #ebebeb;
+    text-align: center;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-top: 21px;
+    margin-bottom: 19px;
+    padding-bottom: 1;
+    padding-top: 1;
+    color: white;
+    background: black;
+}
+
+#body{
+  position: relative;
+  height: 100%;
+}
+
+
+.productos{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Comfortaa', cursive;
+ 
+}
+
+.producto{
+  width: 300px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+}
+.corazon i{
+  position: absolute;
+  top: 1%;
+  right: 2%;;
+  color: white;
+}
+
+.corazon i:hover{
+  color: red;
+}
+
+
+
+.producto1 {
+  width: 300px;
+  background-color: white;
+}
+
+.imagen-producto1 {
+  width:100%;
+  position: relative;
+}
+
+.producto1 .ver-mas {
+  background-color: black;
+  text-align: center;
+  width: 200px;
+
+}
+
+.titulo-descripcion-producto1{
+  margin: 0 auto;
+}
+
+.producto1 .ver-mas a p {
+  color:white;
+}
+
+.producto2 .ver-mas {
+  background-color: black;
+  color:white;
+  text-align: center;
+  width: 200px;
+
+}
+
+.producto2 .ver-mas a p {
+  color:white;
+}
+
+
+.producto2 {
+ position: relative;
+  background-color: white;
+  width: 300px;
+}
+
+.producto3 {
+ position: relative;
+  width: 300px;
+  background-color: white;
+}
+
+.producto3 .ver-mas {
+  background-color: black;
+  color:white;
+  text-align: center;
+  width: 200px;
+
+}
+
+.producto3 .ver-mas a p {
+  color:white;
+}
+
+.producto4 {
+ position: relative;
+  width: 300px;
+  background-color: white;
+}
+
+.producto4 .ver-mas {
+  background-color: black;
+  color:white;
+  text-align: center;
+  width: 200px;
+
+}
+
+.producto4 .ver-mas a p {
+  color:white;
+}
+
+.producto5 {
+  position: relative;
+  width: 300px;
+  background-color: white;
+}
+
+.producto5 .ver-mas {
+  background-color: black;
+  color:white;
+  text-align: center;
+  width: 200px;
+}
+
+.producto5 .ver-mas a p {
+  color:white;
+}
+
+.producto6 {
+  position: relative;
+  width: 300px;
+  background-color: white;
+}
+
+
+
+.producto6 .ver-mas {
+  background-color: black;
+  color:white;
+  text-align: center;
+  width: 200px;
+}
+
+.producto6 .ver-mas a p {
+  color:white;
+}
+
+
+
+
+.productos img{
+  width: 300px;
+}
+
+.descripcion-producto {
+      font-size: 11px;
+}
+
+p {
+  text-align: center;
+}
+
+
+.titulo-producto {
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  margin-bottom: -6px;
+
+}
+
+.kits-en-oferta{
+  margin-top: 20px;
+}
+h4 {
+  background-color: #ebebeb;
+  text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: 'Comfortaa', cursive;
+}
+
+ div .titulo-descripcion-prodcucto {
+   background-color: white;
+   margin-top: 10;
+ }
+
+.ver-mas{
+  margin: 0 auto;
+}
+
+.producto1, .producto2, .producto3, .producto4, .producto5, .producto6{
+  margin-top: 10px;
+  
+}
+
+.producto6{
+  margin-bottom: 5px;
+}
+
+/*versión de Tablet*/
+
+@media (min-width: 768px) {
+
+  .productos {
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+.ver-mas{
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.producto1,.producto2,.producto3,.producto4,.producto5,.producto5,.producto6{
+
+ margin-bottom: 10px;
+}
+
+/*version de Compu*/
+
+@media (min-width: 1024px){
+
+    /*CUERPO PRINCIPAL*/
+
+      .menu-mobile{
+        display: none;
+      }
+    .busqueda{
+        text-align: center;
+    }
+    
+    .lupa{
+      margin-right:100px;
+    }
+    
+    .productos {
+      margin-top: 10px;
+      position: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+
+    .producto5{
+      margin-right: 150px;
+    }
+
+    
+
+
+ }

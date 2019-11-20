@@ -1,0 +1,181 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+
+body {
+    background-color: #ebebeb;
+    position: relative;
+}
+
+.contenedor-principal{
+  overflow: hidden;
+}
+
+
+/* CUERPO PRINCIPAL*/
+
+.registro h1 {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.registro {
+  margin-top: 5px;
+  position: relative;
+  position: center;
+  font-family: 'Comfortaa', cursive;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+form {
+  position: absolute;
+  text-align: center;
+  margin: 30px;
+}
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+
+#boton-enviar {
+  font-family: Arial;
+}
+
+#boton-enviar hover {
+  background-color: #FFE819
+}
+
+.botones {
+  margin-bottom: 10px;
+}
+
+p{
+  font-weight: bold;
+}
+
+
+.pie{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  height: 50px;;
+  background-color: #45454d;
+}
+
+.pie-pagina {
+    margin-top: 5px;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  border-bottom: 1px solid gray;
+
+}
+.pie-pagina a{
+
+  color: white;
+ }
+
+ .contacto{
+    margin-top: 5px;
+  text-align: center;
+  border-bottom: 1px solid grey;
+ }
+
+ .contacto p a{
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+  font-weight: initial;
+ }
+
+ .error{
+  color: red;
+  }
+@media (min-width:768px)  {
+  .registro{ margin:29px;}
+}
+
+
+@media (min-width: 1024px){
+
+    header{
+      height: 50px;
+  }
+
+  .logo h3{
+      font-size: 35px;
+  }
+  .hamburguesa{
+      display: none;
+  }
+
+  .usuario{
+      display: none;
+
+  }
+
+
+  .login-escritorio{
+      margin-right: 30px;
+      display: inline-block;
+      padding-top: 10px;
+
+  }
+  .login-escritorio li{
+      display: inline;
+      font-size: 20px;
+      padding-right: 20px;
+  }
+  .link{
+      color: white;
+
+  }
+
+  .fas.fa-shopping-cart{
+      margin-top: 14px;
+      margin-right: 30px;
+
+  }
+
+
+  .pie{
+    overflow: hidden;
+  }
+.pie-pagina {
+  margin-left: 5px;
+  margin-top: 10px;
+  float: left;
+  font-family: 'Comfortaa', cursive;
+}
+
+.pie-pagina{
+    border: none;
+}
+.pie-pagina a{
+
+ color: white;
+ font-family: 'Comfortaa', cursive;
+ cursor: pointer;
+
+}
+
+.contacto{
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  border: none;
+
+
+}
+
+}

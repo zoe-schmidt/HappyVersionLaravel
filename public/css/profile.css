@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor{
+  overflow: hidden;
+}
+body{
+  position: relative;
+  height: 100%;
+  font-family: 'Comfortaa', cursive;
+  background-color:#ebebeb;
+}
+
+.titulo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ebebeb;
+}
+
+
+h1{
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 40px;
+  text-decoration-line: underline;
+}
+
+.contenedor-avatar{
+  width: 10%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.avatar{
+  width: 100%;
+  height: auto;
+}
+
+
+.padre-datos {
+  overflow: hidden;
+  width: 700px;
+  margin: 0  auto;
+}
+.datos{
+float:left;
+margin: 0 auto;
+padding: 5%;
+margin-left: 215px;
+}
+
+
+.datos-rellenados{
+  text-align: left;
+  margin: 0 auto;
+  padding: 5%;
+  margin-right: 1%;
+}
+
+h2{
+  padding:5%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+p{
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
+
+
+
+@media (min-width: 1024px){
+
+  header{
+      height: 50px;
+  }
+
+  .logo h3{
+      font-size: 35px;
+  }
+  .hamburguesa{
+      display: none;
+  }
+
+  .usuario{
+      display: none;
+
+  }
+
+
+  .login-escritorio{
+      margin-right: 30px;
+      display: inline-block;
+      padding-top: 10px;
+      float: right;
+
+  }
+  .login-escritorio li{
+      display: inline;
+      font-size: 20px;
+      padding-right: 20px;
+  }
+  .link{
+      color: white;
+
+  }
+
+  .fas.fa-shopping-cart{
+      margin-top: 14px;
+      margin-right: 30px;
+
+  }
+}

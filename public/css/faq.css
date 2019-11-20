@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-color:#ebebeb;
+}
+
+.contenedor-principal{
+    width: 100%;
+    overflow: hidden;
+}
+
+p{
+    font-family: 'Comfortaa', cursive;
+}
+
+.texto-faq{
+    margin-top:10px;
+    text-align: center;
+}
+
+.faq{
+        font-family: 'Comfortaa', cursive;
+    }
+
+ .preguntas-faq{
+     margin-top: 10px;
+     text-align: center;
+ }   
+
+ h3.que-es-happy{
+    font-family: 'Comfortaa', cursive;
+    text-decoration: underline;
+}
+
+.duda{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.duda a{
+     text-decoration: underline;
+ }
+
+/*VERSION DE TABLET*/
+
+@media (min-width: 768px){
+
+    main{
+        overflow: hidden;
+
+    }
+    .texto-faq{
+        text-align: center;
+    }
+
+    .preguntas{
+        display: inline-flex;
+    
+    }
+    .duda{
+        margin-top: 15px;
+        text-align: center;
+    }
+
+   
+}  
+
+/*VERSION DE ESCRIORIO*/
+
+@media (min-width: 1024px){
+
+
+    .texto-faq{
+        margin-top: 3%;
+        float: left;
+        margin-left: 10%;
+        text-align: left;
+    }
+    .preguntas{
+        float: right;
+        width: 70%;
+        display: inline-block;
+    }
+
+    .preguntas-faq{
+        text-align: left;
+
+    }
+
+    .duda{ 
+        margin-top: 20%;
+
+    }
+    .dudar a{
+        cursor: pointer;
+    }
+   
+
+}

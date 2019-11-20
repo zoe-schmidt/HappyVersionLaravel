@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-color: #ebebeb;
+    width: 100%;
+}
+
+.contenedor-principal{
+    overflow: hidden;
+}
+
+/*ENCABEZADO*/
+
+
+.titulos-seccion{
+    font-family: 'Comfortaa', cursive;
+    margin-left: 10px;
+}
+
+
+.contacto-happy{
+    width: 100%;
+}
+
+label{
+    margin-left: 10px;
+
+    }
+.fuente-label{
+    font-family: 'Comfortaa', cursive;
+}
+#email{
+    width: 80%;
+    box-sizing: border-box;
+
+}
+#nombre{
+    width: 75%;
+    box-sizing: border-box;
+}
+
+#apellido{
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.consulta{
+    box-sizing: border-box;
+}
+.boton{
+    margin-left: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.mapa{
+    margin-top:15px;
+}
+
+.texto-mapa{
+    margin-bottom:5px;
+}
+.mapa-google{
+position: relative;
+padding-bottom: 41%;
+border: 1px solid gray;
+overflow: hidden;
+}
+
+form texterea #consulta placeholder {
+  font-family: 'Comfortaa', cursive;
+} /* NO PUEDO HACER NOSE PORQUE */
+
+iframe{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+.redes{
+    margin-top: 10px;
+
+}
+
+.texto-redes{
+    margin-bottom: 10px;
+}
+
+.lista-redes ul{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+
+.lista-redes i{
+    font-size: 25px;
+}
+
+
+/*VERSION DE ESCRITORIO*/
+
+@media (min-width: 1024px){
+
+
+
+    .busqueda{
+        text-align: center;
+    }
+
+
+    div.texto-oficina h3{
+        display: inline-block;
+    }
+
+    main{
+        overflow: hidden;
+        min-height: 80vh;
+    }
+
+    .contacto-happy{
+        float: left;
+        width: 45%;
+    }
+
+    .mapa{
+        margin-top: 20px;
+
+        float: left;
+        width: 50%;
+    }
+
+    .contacto-happy{
+        margin-left: 2%;
+    }
+
+    #email{
+        width: 70%;
+        margin-left: 3%;
+    }
+
+    #nombre{
+        width: 70%
+    }
+
+    #apellido{
+        width: 69%;
+    }
+
+   #consulta{
+       width: 86%;
+   }
+
+    .boton{
+        margin-left: 3px;
+    }
+    .texto-mapa{
+        margin-bottom: 10px;
+    }
+
+    .redes{
+        margin-top: 15px;
+        overflow: hidden;
+        float: left;
+    }
+
+
+}

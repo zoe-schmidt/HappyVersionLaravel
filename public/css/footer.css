@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+.pie{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  height: 50px;;
+  background-color: black;
+}
+
+.footer-faq {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  border-bottom: 1px solid white;
+}
+
+.footer-faq a{
+
+ color: white;
+ text-decoration: none;
+}
+
+.contacto{
+ text-align: center;
+ border-bottom: 1px solid white;
+}
+
+.contacto p a{
+ color: white;
+ font-family: 'Comfortaa', cursive;
+ cursor: pointer;
+}
+
+
+@media (min-width: 1024px){
+.pie{
+  overflow: hidden;
+}
+.footer-faq {
+margin-left: 5px;
+margin-top: 15px;
+float: left;
+font-family: 'Comfortaa', cursive;
+}
+
+.footer-faq a{
+color: white;
+font-family: 'Comfortaa', cursive;
+cursor: pointer;
+}
+
+
+.contacto{
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+
+}
+
+}
