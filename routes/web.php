@@ -21,7 +21,7 @@ Route::get("/faq","HomeController@irAFaq");
 
 Route::post('/irAGastronomia', "HomeController@irAGastronomia");
 
-
+/*
 Route::get('/registrate', function () {
     return view('registrate');
 });
@@ -29,7 +29,7 @@ Route::get('/registrate', function () {
 Route::get('/login', function () {
     return view('login');
 });
-
+*/
 
 Route::get('/carrito', function () {
     return view('carrito');
@@ -47,4 +47,8 @@ Route::get('/actividades', function () {
     return view('actividades');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 ?>
