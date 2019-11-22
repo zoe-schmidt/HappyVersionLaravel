@@ -61,6 +61,12 @@
                             </div>
                         </div>
 
+                        <div class="">
+                          <label for="">
+                          </label>
+                          <input type="file" name="" value="">
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
