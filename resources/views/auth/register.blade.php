@@ -1,83 +1,81 @@
-@extends('layouts.app')
+@extends('plantilla')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+@section('main')
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/registrate.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="registro">
+            <h1>Registrate!</h1>
+          <form class="registro" action="registrate.php" method="POST" enctype="multipart/form-data">
+              <label for="nombre">
+                  <p>Nombre:</p>
+                  <input id="nombre" type="text" name="nombre" value="">
+                  <br>
+                  <small class="error"><?= $errores['nombre'] ?? '' ?></small>
+              </label>
+            <br>
+            <br>
+              <label for="apellido">
+                <p>Apellido:</p>
+                <input id="apellido" type="text" name="apellido" value="">
+                <br>
+                <span class="error"><?= $errores['apellido'] ?? '' ?></span>
+              </label>
+            <br>
+            <br>
+              <label for="email">
+                <p>Email: </p>
+                <input type="email" name="email" value="">
+                <br>
+                <small class="error"><?= $errores['email'] ?? '' ?></small>
+                <small class="error"><?= $errores['email'] ?? '' ?></small>
+              </label>
+            <br>
+            <br>
+              <label for="password">
+                <p>Contraseña:</p>
+                <input type="password" name="password" value="">
+                <br>
+                <small class="error"><?= $errores['password'] ?? '' ?></small>
+              </label>
+            <br>
+            <br>
+              <label for="confirmarPassword">
+              <p>Repetí tu contraseña:</p>
+              <input type="password" name="confirmarPassword" value="">
+              <br>
+              <small class="error">
+                <?= $errores['pas<?=$nombre?>sword'][0] ?? '' ?> <br>
+                  <?= $errores['password'][1] ?? '' ?>
+                  <?= $errores['password'][2] ?? '' ?>
+            </small>
+              </label>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+            <br>
+            <br>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+              <input type="file" name="avatar" value="">
+              <small class="error"><?=$errores["avatar"]["error"]?? ""?>
+              <?=$errores["avatar"]["error"]?? "" ?>
+              </small>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="">
-                          <label for="">
-                          </label>
-                          <input type="file" name="" value="">
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+          <div class="botones">
+            <p>
+              <button id="boton-enviar"type="submit" name="button">Enviar</button>
+              <button id="boton-borrar"type="reset" name="reset">Borrar</button>
+            </p>
             </div>
-        </div>
+            </form>
+          </div>
     </div>
-</div>
+  </body>
+</html>
+
 @endsection
