@@ -12,12 +12,15 @@
     <div class="container">
       <div class="registro">
             <h1>Registrate!</h1>
-          <form class="registro" action="registrate.php" method="POST" enctype="multipart/form-data">
+          <form class="registro" action="/register" method="POST" enctype="multipart/form-data">
+            @csrf
               <label for="nombre">
                   <p>Nombre:</p>
-                  <input id="nombre" type="text" name="nombre" value="">
+                  <input id="nombre" type="text" name="nombre" value="{{old('nombre')}}">
                   <br>
-                  <small class="error"><?= $errores['nombre'] ?? '' ?></small>
+                  @error('name')
+                  <span class="error">{{$messages}}</span>
+                  @enderror
               </label>
             <br>
             <br>
@@ -25,16 +28,19 @@
                 <p>Apellido:</p>
                 <input id="apellido" type="text" name="apellido" value="">
                 <br>
-                <span class="error"><?= $errores['apellido'] ?? '' ?></span>
+                @error("name")
+                <span class="error">{{$message}}</span>
+                @enderror
               </label>
             <br>
             <br>
               <label for="email">
                 <p>Email: </p>
-                <input type="email" name="email" value="">
+                <input type="email" name="email" value="{{old('email')}}">
                 <br>
-                <small class="error"><?= $errores['email'] ?? '' ?></small>
-                <small class="error"><?= $errores['email'] ?? '' ?></small>
+                @error('email')
+                <small class="error">{{$message}}</small>
+                @enderror
               </label>
             <br>
             <br>
@@ -42,7 +48,9 @@
                 <p>Contraseña:</p>
                 <input type="password" name="password" value="">
                 <br>
-                <small class="error"><?= $errores['password'] ?? '' ?></small>
+                @error('password')
+                <small class="error">{{$message}}</small>
+                @enderror
               </label>
             <br>
             <br>
@@ -50,11 +58,9 @@
               <p>Repetí tu contraseña:</p>
               <input type="password" name="confirmarPassword" value="">
               <br>
-              <small class="error">
-                <?= $errores['pas<?=$nombre?>sword'][0] ?? '' ?> <br>
-                  <?= $errores['password'][1] ?? '' ?>
-                  <?= $errores['password'][2] ?? '' ?>
-            </small>
+              @error('password')
+                <small class="error">{{$message}}</small>
+                @enderror
               </label>
 
             <br>
