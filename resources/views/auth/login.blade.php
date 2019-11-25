@@ -19,7 +19,7 @@
         <p>Contraseña:</p>
         <input type="password" name="password" value="" id="password" placeholder="Complete el campo">
         <br>
-       <small class="error"><?= $errores['password'][0] ?? '' ?></small> 
+       <small class="error"><?= $errores['password'][0] ?? '' ?></small>
       </label>
       <br>
 

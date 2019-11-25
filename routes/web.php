@@ -19,7 +19,15 @@ Route::get('/contacto',"HomeController@irAContacto");
 
 Route::get("/faq","HomeController@irAFaq");
 
-Route::post('/irAGastronomia', "HomeController@irAGastronomia");
+Route::post('/gastronomia', "HomeController@irAGastronomia");
+
+Route::post('/viajes', "HomeController@irAViajes");
+
+Route::post('/actividades', "HomeController@irAActividades");
+
+Route::get('/login', "HomeController@irALogin");
+
+Route::get('/register', "HomeController@irARegistrate");
 
 /*
 Route::get('/registrate', function () {
