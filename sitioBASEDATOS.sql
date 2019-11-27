@@ -1,12 +1,13 @@
 create database sitio_db;
 use sitio_db;
 
-create table sitio_db.usuarios (
+create table sitio_db.users (
 id int unsigned auto_increment not null primary key,
 nombre varchar(100) not null,
 email varchar(100) not null,
-contrasena varchar(10) not null,
-foto varchar(100)
+apellido varchar(100) not null,
+password varchar(10) not null,
+avatar varchar(100)
 );
 select * from usuarios;
 
@@ -44,3 +45,4 @@ idProducto int
 );
 
 select * from productosComprados;
+

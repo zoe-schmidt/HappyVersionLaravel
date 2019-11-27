@@ -16,8 +16,8 @@ class CreateProductosCompradosTable extends Migration
         Schema::create('productos_comprados', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->id(idProducto);
-            $table->id(idUsuario);
+            $table->bigInteger('idProducto')->unsigned();
+            $table->bigInteger('idUsuario')->unsigned();
         });
     }
 

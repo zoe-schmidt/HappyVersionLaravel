@@ -26,7 +26,7 @@
             <br>
               <label for="apellido">
                 <p>Apellido:</p>
-                <input id="apellido" type="text" name="apellido" value="">
+                <input id="apellido" type="text" name="apellido" value="{{old('apellido')}}">
                 <br>
                 @error("apellido")
                 <small class="error">{{$message}}</small>
@@ -56,12 +56,8 @@
             <br>
               <label for="confirmarPassword">
               <p>Repetí tu contraseña:</p>
-              <input type="password" name="confirmarPassword" value="">
+              <input type="password" name="password_confirmation" value="">
               <br>
-              @error('password')
-                <small class="error">{{$message}}</small>
-                @enderror
-              </label>
 
             <br>
             <br>

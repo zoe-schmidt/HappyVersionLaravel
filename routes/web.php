@@ -29,6 +29,8 @@ Route::get('/login', "HomeController@irALogin");
 
 Route::get('/register', "HomeController@irARegistrate");
 
+Route::post('/', "RegisterController@irARegistrate");
+
 /*
 Route::get('/registrate', function () {
     return view('registrate');
