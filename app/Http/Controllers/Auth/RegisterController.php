@@ -48,21 +48,24 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        $messages=[
-            'name'=> "completa el nombre",
-            "surname" => "completa el apellido",
-            "email" => "completa el mail",
-            "password" => "completa la contrasena",
+        $message=[
+            'nombre.required'=> 'El :attribute no puede estar vacio',
+            "apellido.required" => 'El :attribute no puede estar vacio',
+            "email.required" => 'El :attribute no puede estar vacio',
+            "password.required" => 'El :attribute no puede esta vacio',
+            "password.confirmed" =>"Las contraseñas no coinciden",
+            "password.min" =>"La :attribute debe tener al menos 8 caracteres",
             "avatar" => " "
 
         ];
+        
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['required', 'string', 'max:255'],
+            'nombre' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'avatar'=> ['nullable','image','max:2048']
-        ],$messages);
+        ],$message);
     }
 
     /**

@@ -59,44 +59,10 @@ h1 {
   margin-bottom: 10px;
 }
 
-p{
+p,small {
   font-weight: bold;
 }
 
-
-.pie{
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  height: 50px;;
-  background-color: #45454d;
-}
-
-.pie-pagina {
-    margin-top: 5px;
-  text-align: center;
-  font-family: 'Comfortaa', cursive;
-  border-bottom: 1px solid gray;
-
-}
-.pie-pagina a{
-
-  color: white;
- }
-
- .contacto{
-    margin-top: 5px;
-  text-align: center;
-  border-bottom: 1px solid grey;
- }
-
- .contacto p a{
-  color: white;
-  font-family: 'Comfortaa', cursive;
-  cursor: pointer;
-  font-weight: initial;
- }
 
  .error{
   color: red;
@@ -147,35 +113,5 @@ p{
 
   }
 
-
-  .pie{
-    overflow: hidden;
-  }
-.pie-pagina {
-  margin-left: 5px;
-  margin-top: 10px;
-  float: left;
-  font-family: 'Comfortaa', cursive;
-}
-
-.pie-pagina{
-    border: none;
-}
-.pie-pagina a{
-
- color: white;
- font-family: 'Comfortaa', cursive;
- cursor: pointer;
-
-}
-
-.contacto{
-  float: right;
-  margin-top: 10px;
-  margin-right: 20px;
-  border: none;
-
-
-}
 
 }

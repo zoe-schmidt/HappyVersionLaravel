@@ -18,8 +18,8 @@
                   <p>Nombre:</p>
                   <input id="nombre" type="text" name="nombre" value="{{old('nombre')}}">
                   <br>
-                  @error('name')
-                  <span class="error">{{$messages}}</span>
+                  @error('nombre')
+                  <small class="error">{{$message}}</small>
                   @enderror
               </label>
             <br>
@@ -28,8 +28,8 @@
                 <p>Apellido:</p>
                 <input id="apellido" type="text" name="apellido" value="">
                 <br>
-                @error("name")
-                <span class="error">{{$message}}</span>
+                @error("apellido")
+                <small class="error">{{$message}}</small>
                 @enderror
               </label>
             <br>
@@ -67,8 +67,7 @@
             <br>
 
               <input type="file" name="avatar" value="">
-              <small class="error"><?=$errores["avatar"]["error"]?? ""?>
-              <?=$errores["avatar"]["error"]?? "" ?>
+             
               </small>
 
 

@@ -39,7 +39,7 @@
           <a href="profile.php"><i class="fas fa-user"></i></a>
           <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
           <?php }else{ ?>
-          <a href="registrate.php"><i class="fas fa-sign-in-alt"></i></a>
+          <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
           <a href="login.php"><i class="fas fa-user"></i></a>
           <?php } ?>
         </ul>
@@ -62,7 +62,7 @@
           <li><a class="link" href="profile.php"> Mi Perfil</a></li>
           <?php }else{ ?>
           <li><a class ="link" href="login.php">Login</a></li>
-          <li><a class= "link"href="registrate.php">Registrarse</a></li>
+          <li><a class= "link"href="/register">Registrarse</a></li>
           <?php } ?>
         </ul>
       </div>
