@@ -27,9 +27,13 @@ Route::post('/actividades', "HomeController@irAActividades");
 
 Route::get('/login', "HomeController@irALogin");
 
+Route::post('/login', "LoginController@showLoginForm");
+
 Route::get('/register', "HomeController@irARegistrate");
 
 Route::post('/', "RegisterController@irARegistrate");
+
+
 
 /*
 Route::get('/registrate', function () {

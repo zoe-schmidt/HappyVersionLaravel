@@ -13,18 +13,18 @@
     <header>
 
       <div class="logo">
-        <a href="home.php"><img src="imagenes/logo_happy_final.png" alt="imagenes"></a>
+        <a href="/"><img src="imagenes/logo_happy_final.png" alt="imagenes"></a>
       </div>
 
 
       <div class="categoriasDeProductos">
         <ul class=listaDeProductosLaptop>
-            <li><a href="gastronomia.php">Gastronomía</a></li>
-            <li><a href="actividades.php">Actividades</a></li>
-            <li><a href="viajes.php">Viajes</a></li>
+            <li><a href="/gastronomia">Gastronomía</a></li>
+            <li><a href="/actividades">Actividades</a></li>
+            <li><a href="/viajes">Viajes</a></li>
         </ul>
       </div>
-      
+
       <!--header en mobile-->
 
       <div class="hamburguesa">
@@ -36,20 +36,20 @@
         <div class="usuario">
         <ul>
           <?php if(isset($_SESSION["email"])){?>
-          <a href="profile.php"><i class="fas fa-user"></i></a>
-          <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
+          <a href="/profile"><i class="fas fa-user"></i></a>
+          <a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
           <?php }else{ ?>
           <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
-          <a href="login.php"><i class="fas fa-user"></i></a>
+          <a href="/login"><i class="fas fa-user"></i></a>
           <?php } ?>
         </ul>
-         
+
         </div>
       </div>
 
       <div class="carrito">
-          <a href="carrito.php"> <i class="fas fa-shopping-cart"></i></a>
-        
+          <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
+
       </div>
 
        <!--HEADER EN ESCRITORIO-->
@@ -58,10 +58,10 @@
       <div class="login-escritorio">
         <ul>
         <?php if(isset($_SESSION["email"])){?>
-          <li><a class="link" href="logout.php">cerrar sesión</a></li>
-          <li><a class="link" href="profile.php"> Mi Perfil</a></li>
+          <li><a class="link" href="/logout">cerrar sesión</a></li>
+          <li><a class="link" href="/profile"> Mi Perfil</a></li>
           <?php }else{ ?>
-          <li><a class ="link" href="login.php">Login</a></li>
+          <li><a class ="link" href="/login">Login</a></li>
           <li><a class= "link"href="/register">Registrarse</a></li>
           <?php } ?>
         </ul>
@@ -80,19 +80,18 @@
 
 
     @yield("main")
-    
+
 
   <footer class="pie">
 
     <div class="footer-faq">
-      <a href="faq.php">Preguntas frecuentes</a>
+      <a href="/faq">Preguntas frecuentes</a>
     </div>
     <div class="contacto">
-      <p><a href="contacto.php">Contacto</a></p>
+      <p><a href="/contacto">Contacto</a></p>
     </div>
 
       </div>
  </footer>
 </body>
 </html>
-
