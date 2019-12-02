@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
 
 
 Route::get('/', "HomeController@irAHome");
@@ -23,15 +22,17 @@ Route::post('/gastronomia', "HomeController@irAGastronomia");
 
 Route::post('/viajes', "HomeController@irAViajes");
 
+Route::post('/register', "HomeController@irARegistrate");
+
 Route::post('/actividades', "HomeController@irAActividades");
 
-Route::get('/auth/login', "HomeController@irALogin");
+//Route::get('/auth/login', "HomeController@irALogin");
 
-Route::get('/register', "HomeController@irARegistrate");
+//Route::get('/register', "HomeController@irARegistrate");
 
-Route::post('/', "RegisterController@irARegistrate");
+//Route::post('/', "RegisterController@irARegistrate");
 
-Route::get('/login', "Auth\LoginController@cargarLogin");
+//Route::get('/login', "LoginController@cargarLogin");
 
 /*
 Route::get('/registrate', function () {
@@ -60,9 +61,6 @@ Route::get('/actividades', function () {
 });
 
 
+Auth::routes();
 
-
-
-
-
-?>
+Route::get('/home', 'HomeController@index')->name('home');
