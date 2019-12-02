@@ -25,15 +25,13 @@ Route::post('/viajes', "HomeController@irAViajes");
 
 Route::post('/actividades', "HomeController@irAActividades");
 
-Route::get('/login', "HomeController@irALogin");
-
-Route::post('/login', "LoginController@showLoginForm");
+Route::get('/auth/login', "HomeController@irALogin");
 
 Route::get('/register', "HomeController@irARegistrate");
 
 Route::post('/', "RegisterController@irARegistrate");
 
-
+Route::get('/login', "Auth\LoginController@cargarLogin");
 
 /*
 Route::get('/registrate', function () {
@@ -60,6 +58,8 @@ Route::get('/viajes', function () {
 Route::get('/actividades', function () {
     return view('actividades');
 });
+
+
 
 
 

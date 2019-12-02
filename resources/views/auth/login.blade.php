@@ -1,3 +1,5 @@
+
+
 @extends('plantilla')
 
 @section('main')
@@ -5,6 +7,7 @@
 <div class="formulario-ingreso">
     <form class="formulario-ingreso" action='/login'method="post">
                                             {{--{{route('login')}}/*  --}}
+      @csrf
       <h1>Ingresá</h1>
       <div class="formulario">
       <label for="email">
