@@ -39,7 +39,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        
+
     }
 */
     /**
@@ -60,7 +60,7 @@ class RegisterController extends Controller
             "avatar" => " "
 
         ];
-        
+
         return Validator::make($data, [
             'nombre' => ['required', 'string', 'max:255'],
             'apellido' => ['required', 'string', 'max:255'],
@@ -90,5 +90,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'avatar'=> $imagen,
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        return view('auth/register');
     }
 }

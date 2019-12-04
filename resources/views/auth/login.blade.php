@@ -1,17 +1,22 @@
+
+
 @extends('plantilla')
 
 @section('main')
 <link rel="stylesheet" href="/css/login.css">
 <div class="formulario-ingreso">
-    <form class="formulario-ingreso" action="login.php" method="post">
+    <form class="formulario-ingreso" action='/login'method="post">
+                                            {{--{{route('login')}}/*  --}}
+      @csrf
       <h1>Ingresá</h1>
       <div class="formulario">
       <label for="email">
         <p>Usuario:</p>
         <input type="text" name="email" value="" id="email" placeholder="Complete el campo">
         <br>
-        <small class="error"><?= $errores['email'][0] ?? '' ?></small>
-        <small class="error"><?= $errores['email'][1] ?? '' ?></small>
+        @error('email')
+        <small class="error">{{$message}}</small>
+        @enderror
       </label>
       <br>
       <br>
@@ -19,7 +24,9 @@
         <p>Contraseña:</p>
         <input type="password" name="password" value="" id="password" placeholder="Complete el campo">
         <br>
-       <small class="error"><?= $errores['password'][0] ?? '' ?></small>
+        @error('password')
+        <small class="error">{{$message}}</small>
+        @enderror
       </label>
       <br>
 

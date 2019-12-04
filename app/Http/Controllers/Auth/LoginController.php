@@ -25,15 +25,34 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+     protected function validator(array $data)
+     {
+         $message=[
+             "email.required" => 'El :attribute no puede estar vacio',
+             "password.required" => 'El :attribute no puede esta vacio'
+         ];
+
+         return Validator::make($data, [
+             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+             'password' => ['required', 'string', 'min:3', 'confirmed'],
+         ],$message);
+     }
+
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function cargarLogin()
+    {
+        return view('auth/login');
     }
 }
