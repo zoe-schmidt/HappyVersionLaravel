@@ -5,7 +5,7 @@
 @section('main')
 <link rel="stylesheet" href="/css/login.css">
 <div class="formulario-ingreso">
-    <form class="formulario-ingreso" action='/login'method="post">
+    <form class="formulario-ingreso" id="formulario-ingreso" action='/login' method="post">
                                             {{--{{route('login')}}/*  --}}
       @csrf
       <h1>Ingresá</h1>
@@ -48,4 +48,5 @@
       </div>
     </form>
   </div>
+ <script src="/js/formulario-login.js"></script>
 @endsection
