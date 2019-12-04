@@ -19,9 +19,9 @@
 
       <div class="categoriasDeProductos">
         <ul class=listaDeProductosLaptop>
-            <li><a href="gastronomia.php">Gastronomía</a></li>
-            <li><a href="actividades.php">Actividades</a></li>
-            <li><a href="viajes.php">Viajes</a></li>
+            <li><a href="/gastronomia">Gastronomía</a></li>
+            <li><a href="/actividades">Actividades</a></li>
+            <li><a href="/viajes">Viajes</a></li>
         </ul>
       </div>
       
@@ -40,7 +40,7 @@
           <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
           <?php }else{ ?>
           <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
-          <a href="login.php"><i class="fas fa-user"></i></a>
+          <a href="/login"><i class="fas fa-user"></i></a>
           <?php } ?>
         </ul>
          
@@ -48,7 +48,7 @@
       </div>
 
       <div class="carrito">
-          <a href="carrito.php"> <i class="fas fa-shopping-cart"></i></a>
+          <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
         
       </div>
 
