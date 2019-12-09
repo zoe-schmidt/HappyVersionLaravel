@@ -15,6 +15,16 @@
        <h1>GASTRONOMIA</h1>
         </div>
 
+      </section>
+      <div class="busqueda">
+        <div class="lupa">
+          <i class="fas fa-search"></i>
+        </div>
+        <form>
+          <input type="search" class="buscar" placeholder="Descubrí tu Próxima Aventura">
+        </form>
+      </div>
+
        <div class="productos">
          <div class="producto1">
            <div class="imagen-producto1">

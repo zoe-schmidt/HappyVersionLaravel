@@ -7,7 +7,9 @@
 
 
   <main>
-
+    <div class="titulo">
+      <h1>VIAJES</h1>
+      </div>
     </section>
     <div class="busqueda">
       <div class="lupa">
@@ -17,9 +19,7 @@
         <input type="search" class="buscar" placeholder="Descubrí tu Próxima Aventura">
       </form>
     </div>
-    <div class="happy">
-      <h3 class="happy">Happy</h3>
-    </div>
+    
 
     <div class="productos">
       <div class="producto1">

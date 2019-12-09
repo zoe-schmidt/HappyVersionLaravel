@@ -5,7 +5,10 @@ body{
   background-color: #ebebeb;
 }
 
-.busqueda{
+input .busqueda{
+    width: 90%;
+    margin-top: 11px;
+    margin-left: 46px;
     overflow: hidden;
     position: center;
 }

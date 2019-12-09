@@ -78,5 +78,5 @@
     </div>
   </body>
 </html>
-
+<script src="/js/formulario-registro.js"></script>
 @endsection

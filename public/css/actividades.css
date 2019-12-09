@@ -14,6 +14,22 @@ body{
 h1{
   text-align: center;
 }
+
+input .busqueda{
+  width: 90%;
+  margin-top: 11px;
+  margin-left: 46px;
+  overflow: hidden;
+  position: center;
+}
+
+.lupa{
+  float: right;
+  margin-top: 2px;
+  margin-left: 7px;
+
+}
+
 .productos {
   position:relative;
   text-align: center;
