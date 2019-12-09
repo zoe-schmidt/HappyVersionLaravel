@@ -18,6 +18,8 @@ Route::get('/contacto',"HomeController@irAContacto");
 
 Route::get("/faq","HomeController@irAFaq");
 
+Route::get("/cargarProducto","productoController@iraCargarProducto");
+
 Route::post('/gastronomia', "HomeController@irAGastronomia");
 
 Route::post('/viajes', "HomeController@irAViajes");
@@ -25,6 +27,7 @@ Route::post('/viajes', "HomeController@irAViajes");
 Route::post('/register', "HomeController@irARegistrate");
 
 Route::post('/actividades', "HomeController@irAActividades");
+
 
 //Route::get('/auth/login', "HomeController@irALogin");
 
