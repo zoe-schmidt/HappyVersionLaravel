@@ -20,7 +20,7 @@ class productoController extends Controller
             "precio"=>"integer",
             "imagen"=>"file",
         ];
-
+        
         $message=[
             "string"=> "El :attribute debe ser un texto",
             "required"=>"El :attribute no puede estar vacio",
@@ -33,19 +33,16 @@ class productoController extends Controller
 
         $nuevoProducto=new producto();
 
-        $ruta=$form->file("imagen")-store("public");
+        $ruta=$form->file("imagen")->store("public");
         $nombreArchivo=basename($ruta);
 
         $nuevoProducto->nombre=$form["nombre"];
         $nuevoProducto->descripcion=$form["descripcion"];
         $nuevoProducto->precio=$form["precio"];
-        //$nuevoProducto->imagen=$nombreArchivo; HAY QUE AGREGARLA A LA BASE//
-        //hacer el php storage link!//
-
-
+        $nuevoProducto->imagen=$nombreArchivo; 
 
         $nuevoProducto->save();
 
-        return redirect("/cargarProducto");
+        return redirect("/");
     }
 }

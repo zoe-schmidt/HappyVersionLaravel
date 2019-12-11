@@ -16,7 +16,7 @@
         
         <div class="titulo">
            <label for="nombre">Titulo del Producto:</label>
-           <input type="text" name="nombre" id="titulo"> 
+           <input type="text" name="nombre" id="nombre" value="{{old('nombre')}}"> 
            <br>
            @error('nombre')
                   <small class="error">{{$message}}</small>
