@@ -28,7 +28,11 @@ Route::post('/viajes', "HomeController@irAViajes");
 
 Route::post('/register', "HomeController@irARegistrate");
 
+Route::post('/register', "RegisterController@redirigir");
+
 Route::post('/actividades', "HomeController@irAActividades");
+
+
 
 
 //Route::get('/auth/login', "HomeController@irALogin");
