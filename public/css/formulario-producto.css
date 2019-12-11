@@ -46,6 +46,11 @@ label{
    margin-right: 5px; 
 }
 
+.error{
+    color:red;
+    font-family: 'Solway', serif;
+}
+
 .botones{
     padding-bottom:  10px;
     

@@ -9,14 +9,18 @@
 <div class="contenedor-principal">
 
     <form action="" method="post" class="form-productos" enctype="multipart/form-data">
-
+        @csrf
         <div class="cargar-titulo">
             <h1>CARGAR UN NUEVO PRODUCTO</h1>
         </div>
         
         <div class="titulo">
-           <label for="titulo">Titulo del Producto:</label>
-           <input type="text" name="titulo" id="titulo"> 
+           <label for="nombre">Titulo del Producto:</label>
+           <input type="text" name="nombre" id="titulo"> 
+           <br>
+           @error('nombre')
+                  <small class="error">{{$message}}</small>
+                  @enderror
         </div>
 
         <div>
@@ -31,11 +35,19 @@
         <div>
             <label for="descripcion" class="descripcion">Descripción:</label>
             <textarea name="descripcion" id="descripcion" cols="30" rows="5"></textarea>
+            <br>
+            @error('descripcion')
+                  <small class="error">{{$message}}</small>
+                  @enderror
         </div>
 
     <div>
         <label for="precio">precio:</label>
         <input type="text" name="precio" id="precio">
+        <br>
+        @error('precio')
+                  <small class="error">{{$message}}</small>
+                  @enderror
     </div>
 
     <div>
@@ -50,6 +62,7 @@
 
     
     </form>
+
 
 </div>
 
