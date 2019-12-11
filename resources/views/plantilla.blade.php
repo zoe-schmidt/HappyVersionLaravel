@@ -49,7 +49,7 @@
 
       <div class="carrito">
           <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
-        
+
       </div>
 
        <!--HEADER EN ESCRITORIO-->

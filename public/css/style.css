@@ -52,7 +52,7 @@ main{
     float: right;
     margin-top: 2px;
     margin-left: 7px;
-    
+
 }
 form{
     float: left;
@@ -89,12 +89,13 @@ div .happy {
 
 
 .productos{
+  margin-top: 18px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-family: 'Comfortaa', cursive;
- 
+
 }
 
 .producto{
@@ -279,7 +280,7 @@ h4 {
 
 .producto1, .producto2, .producto3, .producto4, .producto5, .producto6{
   margin-top: 10px;
-  
+
 }
 
 .producto6{
@@ -295,6 +296,10 @@ h4 {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .producto6{
+    margin-left: 19px;
   }
 
 
@@ -314,18 +319,24 @@ h4 {
 @media (min-width: 1024px){
 
     /*CUERPO PRINCIPAL*/
+      div happy {
+        display:none;
+      }
 
       .menu-mobile{
         display: none;
       }
     .busqueda{
+      margin-top: 10px;
         text-align: center;
+        margin-left: 100px;
     }
-    
+
     .lupa{
-      margin-right:100px;
+      margin-right:90px;
+
     }
-    
+
     .productos {
       margin-top: 10px;
       position: center;
@@ -339,7 +350,7 @@ h4 {
       margin-right: 150px;
     }
 
-    
+
 
 
  }

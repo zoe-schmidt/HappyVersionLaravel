@@ -63,7 +63,7 @@
             <br>
 
               <input type="file" name="avatar" value="">
-             
+
               </small>
 
 

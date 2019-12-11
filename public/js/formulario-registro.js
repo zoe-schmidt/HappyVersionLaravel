@@ -4,17 +4,17 @@ window.onload=function(){
     var testnombre= /^\w{3,50}$/;
     var testapellido= /^\w{3,50}$/;
 
-    var formulario=document.querySelector("#registro");
+    var formulario=document.querySelector("form.registro");
 
-    var elementos=formulario.elements;
+
 
 
    formulario.onsubmit=function(event){
     event.preventDefault();
+          var elementos=this.elements;
 
- 
         for(var element of elementos){
-    
+
            if(element.type=='hidden' || element.type=='submit'){
                continue;
            }
@@ -41,26 +41,26 @@ window.onload=function(){
             /* else if(element.name == 'password_confirmation' && !testpass.test(element.value)){
                 event.preventDefault();
                 alert("la contrasena debe tener al menos 3 caracteres");
-            } 
+            }
             */
 
             if(element.name == 'nombre' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo nombre esta vacio");            
+                alert("el campo nombre esta vacio");
             } else if (element.name == 'nombre' && !testnombre.test(element.value)){
                 event.preventDefault();
                 alert("el nombre debe tener al menos 3 letras");
             }
             if(element.name == 'apellido' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo nombre esta vacio");            
+                alert("el campo nombre esta vacio");
             } else if (element.name == 'apellido' && !testapellido.test(element.value)){
                 event.preventDefault();
                 alert("el apellido debe tener al menos 3 letras");
             }
 
 
-            
+
 
     }
 }
