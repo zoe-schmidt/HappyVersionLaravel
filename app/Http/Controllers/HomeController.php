@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\producto;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,11 @@ class HomeController extends Controller
     }
 
     public function irAHome(){
-        return view("home/index");
+        $productos=producto::orderBy('nombre')->get();
+
+        $vac=compact("productos");
+
+        return view("home/index",$vac);
     }
 
     public function irAContacto(){

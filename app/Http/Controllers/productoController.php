@@ -12,6 +12,14 @@ class productoController extends Controller
         return view("cargarProducto");
     }
 
+    public function mostrarProducto($id){
+        $productos=producto::find($id);
+
+        $vac=compact("productos");
+
+        return view("/",$vac);
+    }
+
     public function agregarProducto(request $form){
 
         $reglas=[

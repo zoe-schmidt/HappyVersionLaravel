@@ -1,5 +1,4 @@
 
-
 @extends("plantilla")
 
 @section("main")
@@ -53,112 +52,122 @@
 
         <div class="productos">
           <div class="producto">
-            <div class="imagen-producto1">
-              <img id="cena-de-sushi-para-dos" src="imagenes/SUSHI.png" alt="cena-de-sushi-para-dos">
-            </div>
-            <div class="corazon">
-            <i class="fas fa-heart"></i>
-            </div>
-            <div class="titulo-Descripcion-Producto1">
-          <section id="producto1">
-            <article class="producto1">
-              <div class="titulo-descripcion-producto1">
-              <br>
-              <p class="titulo-producto" >Cena de Sushi para dos</p>
-              <br>
-              <p class="descripcion-producto">Disfruta de una cena de sushi con tu pareja! Combo de piezas a elección! </p>
-              <br>
+              <div class="imagen-producto1">
+                @forelse ($productos as $producto)
+                  
+                <img id="cena-de-sushi-para-dos" src="/storage/{{$producto->imagen}}" alt="cena-de-sushi-para-dos">
+                @empty
+              @endforelse
               </div>
-              <div class="ver-mas">
-                  <a href=""><p>VER MÁS</p></a>
-                </div>
-                <div class="carrito">
-                    <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </article>
-            </section>
+              
+
+              <div class="corazon">
+              <i class="fas fa-heart"></i>
+              </div>
+              
+              <div class="titulo-Descripcion-Producto1">
+            
+                <section id="producto1">
+                    <article class="producto1">
+                      <div class="titulo-descripcion-producto1">
+                      <br>
+                      <p class="titulo-producto" >Cena de Sushi para dos</p>
+                      <br>
+                      <p class="descripcion-producto">Disfruta de una cena de sushi con tu pareja! Combo de piezas a elección! </p>
+                      <br>
+                      </div>
+                      
+                      <div class="ver-mas">
+                          <a href=""><p>VER MÁS</p></a>
+                        </div>
+                        
+                        <div class="carrito">
+                            <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </article>
+              </section>
             </div>
           </div>
 
-          <div class="producto2">
-            <div class="imagen-producto2">
-              <img id="salto-en-paracaidas" src="imagenes/parachute_1.png" alt="salto-en-paracaidas">
+            <div class="producto2">
+              <div class="imagen-producto2">
+                <img id="salto-en-paracaidas" src="imagenes/parachute_1.png" alt="salto-en-paracaidas">
+              </div>
+              <div class="corazon">
+              <i class="fas fa-heart"></i>
+              </div>
+              <div class="titulo-Descripcion-producto2">
+              <section>
+                <article class="producto2">
+                  <div class="titulo-descripcion-producto2">
+                  <br>
+                  <p class="titulo-producto">Salto en paracaidas</p>
+                  <br>
+                  <p class="descripcion-producto">Desde Tandil salta al vacio! Animate a vivir esta nueva experiencia!</p>
+                  <br>
+                  </div>
+                  <div class="ver-mas">
+                      <a href=""><p>VER MÁS</p></a>
+                    </div>
+                    <div class="carrito">
+                        <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </article>
+              </section>
+              </div>
             </div>
-            <div class="corazon">
-            <i class="fas fa-heart"></i>
-            </div>
-            <div class="titulo-Descripcion-producto2">
-            <section>
-              <article class="producto2">
-                <div class="titulo-descripcion-producto2">
+
+            <div class="producto3">
+              <div class="imagen-producto3">
+                <img id="dia-de-spa-en-pareja" src="imagenes/spa_2.png" alt="dia-de-spa-en-pareja">
+              </div>
+              <div class="corazon">
+              <i class="fas fa-heart"></i>
+              </div>
+              <div class="titulo-Descripcion-producto3">
+              <article class="producto3">
+                <div class="titulo-descripcion-producto3">
                 <br>
-                <p class="titulo-producto">Salto en paracaidas</p>
+                <p class="titulo-producto">Dia de Spa en Pareja</p>
                 <br>
-                <p class="descripcion-producto">Desde Tandil salta al vacio! Animate a vivir esta nueva experiencia!</p>
+                <p class="descripcion-producto">Tomate un día con tu pareja, relajense y disfruten! </p>
                 <br>
                 </div>
                 <div class="ver-mas">
                     <a href=""><p>VER MÁS</p></a>
                   </div>
-                  <div class="carrito">
-                      <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
-                  </div>
               </article>
-            </section>
+              </div>
             </div>
-          </div>
+        </div>
 
-          <div class="producto3">
-            <div class="imagen-producto3">
-              <img id="dia-de-spa-en-pareja" src="imagenes/spa_2.png" alt="dia-de-spa-en-pareja">
+        <div class="kits-en-oferta">
+          <h4>Kits en Oferta!</h4>
+        </div>
+
+        <div class="productos">
+          <div class="producto4">
+            <div class="imagen-producto4">
+              <img id="dia-en-temaiken" src="imagenes/mm_1.png" alt="dia-en-temaiken">
             </div>
             <div class="corazon">
-            <i class="fas fa-heart"></i>
-            </div>
-            <div class="titulo-Descripcion-producto3">
-            <article class="producto3">
-              <div class="titulo-descripcion-producto3">
-              <br>
-              <p class="titulo-producto">Dia de Spa en Pareja</p>
-              <br>
-              <p class="descripcion-producto">Tomate un día con tu pareja, relajense y disfruten! </p>
-              <br>
+              <i class="fas fa-heart"></i>
+              </div>
+            <div class="titulo-Descripcion-Producto4">
+            <section id="producto4">
+              <article class="producto4">
+                  <div class="titulo-descripcion-producto4">
+                    <br>
+                  <p class="titulo-producto" >Paseo por temaiken!</p>
+                  <br>
+                  <p class="descripcion-producto">Disfruta de un día en familia en Temaiken! </p>
+                  <br>
+                  </div>
               </div>
               <div class="ver-mas">
                   <a href=""><p>VER MÁS</p></a>
                 </div>
-            </article>
-            </div>
-          </div>
-       </div>
-
-       <div class="kits-en-oferta">
-         <h4>Kits en Oferta!</h4>
-       </div>
-
-       <div class="productos">
-         <div class="producto4">
-           <div class="imagen-producto4">
-             <img id="dia-en-temaiken" src="imagenes/mm_1.png" alt="dia-en-temaiken">
-           </div>
-           <div class="corazon">
-            <i class="fas fa-heart"></i>
-            </div>
-           <div class="titulo-Descripcion-Producto4">
-           <section id="producto4">
-             <article class="producto4">
-                 <div class="titulo-descripcion-producto4">
-                  <br>
-                 <p class="titulo-producto" >Paseo por temaiken!</p>
-                 <br>
-                 <p class="descripcion-producto">Disfruta de un día en familia en Temaiken! </p>
-                 <br>
-                 </div>
-            </div>
-            <div class="ver-mas">
-                <a href=""><p>VER MÁS</p></a>
-              </div>
-             </article>
+              </article>
           </div>
 
           <div class="productos">
