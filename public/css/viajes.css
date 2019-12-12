@@ -5,21 +5,22 @@ body{
   background-color: #ebebeb;
 }
 
-input .busqueda{
-    width: 90%;
-    margin-top: 11px;
-    margin-left: 46px;
-    overflow: hidden;
-    position: center;
+.buscar{
+  width: 72%;
+  text-align: center;
+  margin-bottom: 18px;
+  margin-top: -14px;
+ margin-left: 46px;
+ overflow: hidden;
+ position: center;
 }
+
 
 .lupa{
-    float: right;
-    margin-top: 2px;
-    margin-left: 7px;
-
+ float: right;
+ margin-top: 2px;
+ margin-right: 23px;
 }
-
 
 .titulo {
   padding-top: 20px;
@@ -31,6 +32,7 @@ h1{
   text-align: center;
 }
 .productos {
+  margin-left: 40px;
   position:relative;
   text-align: center;
   display: flex;
@@ -95,6 +97,20 @@ text-align: center;
     .productos {
       flex-direction: inherit;
     }
+    .buscar{
+     width: 90%;
+     margin-bottom: 19px;
+     margin-top: -1px;
+     margin-left: 46px;
+     overflow: hidden;
+     position: center;
+    }
+
+    .lupa{
+     float: right;
+     margin-top: 2px;
+     margin-right: 8px;
+    }
 }
 
 @media (min-width: 1024px){
@@ -118,4 +134,19 @@ text-align: center;
     color: white;
   }
 
+  .buscar{
+    text-align: center;
+   width: 90%;
+   margin-bottom: 19px;
+   margin-top: -1px;
+   margin-left: 46px;
+   overflow: hidden;
+   position: center;
+ }
+
+ .lupa{
+   float: right;
+   margin-top: 2px;
+   margin-right: 60px;
+ }
 }

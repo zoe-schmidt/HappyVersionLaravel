@@ -70,9 +70,9 @@
 
  <section class="menu-mobile">
   <ul class="lista-mobile">
-      <li><a href="gastronomia.php">Gastronomía</a></li>
-      <li><a href="actividades.php">Actividades</a></li>
-      <li><a href="viajes.php">Viajes</a></li>
+      <li><a href="/gastronomia">Gastronomía</a></li>
+      <li><a href="/actividades">Actividades</a></li>
+      <li><a href="/viajes">Viajes</a></li>
   </ul>
 </section>
 
