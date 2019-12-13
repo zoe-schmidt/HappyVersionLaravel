@@ -63,7 +63,7 @@
           <li><a class= "link"href="/register">Registrarse</a></li>
         @else
           <li><a class="link" href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">cerrar sesión</a></li>
-          <li><a class="link" href="/profile"> Mi Perfil</a></li>
+          <li><a class="link" href="/perfil"> Mi Perfil</a></li>
         @endguest
         </ul>
       </div>

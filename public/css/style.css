@@ -87,7 +87,8 @@ div .happy {
   height: 100%;
 }
 
-
+#carouselExampleIndicators{    max-height: 500px;
+    overflow: hidden;}
 .productos{
   margin-top: 18px;
   text-align: center;
