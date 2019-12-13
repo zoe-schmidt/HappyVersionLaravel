@@ -31,13 +31,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="/imagenes/bajo.jpg" alt="First slide">
+              <img class="d-block w-100" src="/imagenes/carusel-viajes.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="/imagenes/dia-de-spa-en-pareja.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="/imagenes/gastronomia.jpg" alt="Third slide">
+              <img class="d-block w-100" src="/imagenes/carusel-sushi.jpg" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -52,20 +52,14 @@
 
         <div class="productos">
           <div class="producto">
-                
-           
+
               <div class="imagen-producto1">
-                  
                 <img id="cena-de-sushi-para-dos" src="/imagenes/sushi.png" alt="cena-de-sushi-para-dos">
               </div>
-              
-
               <div class="corazon">
               <i class="fas fa-heart"></i>
               </div>
-              
               <div class="titulo-Descripcion-Producto1">
-            
                 <section id="producto1">
                     <article class="producto1">
                       <div class="titulo-descripcion-producto1">
@@ -75,11 +69,11 @@
                       <p class="descripcion-producto">Disfruta de una cena de sushi con tu pareja! Combo de piezas a elección! </p>
                       <br>
                       </div>
-                  
+
                       <div class="ver-mas">
                           <a href=""><p>VER MÁS</p></a>
                         </div>
-                     
+
                         <div class="carrito">
                             <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
                         </div>

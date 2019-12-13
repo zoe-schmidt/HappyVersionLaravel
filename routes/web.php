@@ -32,6 +32,8 @@ Route::get('/actividades', "HomeController@irAActividades");
 
 Route::get('/carrito', "HomeController@irACarrito");
 
+Route::get('/perfil', "HomeController@irAPerfil");
+
 
 
 

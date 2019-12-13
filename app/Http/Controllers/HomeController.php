@@ -51,7 +51,7 @@ class HomeController extends Controller
 
     public function irAGastronomia(){
        $productos=producto::all();
-       
+
        $vac=compact("productos");
 
         return view("gastronomia",$vac);
@@ -72,6 +72,8 @@ class HomeController extends Controller
     public function irACarrito(){
         return view("carrito");
     }
-
+    public function irAPerfil(){
+        return view("perfil");
+    }
 
 }
