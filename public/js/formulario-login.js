@@ -9,11 +9,9 @@ window.onload=function(){
 
 
    formulario.onsubmit=function(event){
-    event.preventDefault();
 
- 
         for(var element of elementos){
-    
+
            if(element.type=='hidden' || element.type=='submit'){
                continue;
            }
@@ -23,7 +21,7 @@ window.onload=function(){
             }else if(element.name == 'email' && !regxmail.test(element.value)){
                 console.log(regxmail.test(element.value));
                 event.preventDefault();
-                alert("no es mail tu vieja");
+                alert("no es mail");
             }
             if(element.name == 'password' && element.value.trim()==' '){
                 event.preventDefault();
@@ -32,8 +30,7 @@ window.onload=function(){
                 event.preventDefault();
                 alert("la contrasena debe tener al menos 3 caracteres");
             }
-             
+
         }
     }
 }
-
