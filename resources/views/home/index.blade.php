@@ -52,12 +52,11 @@
 
         <div class="productos">
           <div class="producto">
+                
+           
               <div class="imagen-producto1">
-                @forelse ($productos as $producto)
                   
-                <img id="cena-de-sushi-para-dos" src="/storage/{{$producto->imagen}}" alt="cena-de-sushi-para-dos">
-                @empty
-              @endforelse
+                <img id="cena-de-sushi-para-dos" src="/imagenes/sushi.png" alt="cena-de-sushi-para-dos">
               </div>
               
 
@@ -76,11 +75,11 @@
                       <p class="descripcion-producto">Disfruta de una cena de sushi con tu pareja! Combo de piezas a elección! </p>
                       <br>
                       </div>
-                      
+                  
                       <div class="ver-mas">
                           <a href=""><p>VER MÁS</p></a>
                         </div>
-                        
+                     
                         <div class="carrito">
                             <a href="/carrito"> <i class="fas fa-shopping-cart"></i></a>
                         </div>

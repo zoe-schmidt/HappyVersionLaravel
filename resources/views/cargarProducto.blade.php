@@ -26,9 +26,11 @@
         <div>
             <label for="categoria"> Categoría:</label>
         <select name="categoria" id="categoria">
-            <option value="via">Viajes</option>
-            <option value="act">Actividades</option>
-            <option value="gas">Gastronomía</option>
+
+            @foreach ($categorias as $categoria)
+            <option value="{{$categoria->id}}">{{$categoria->nombre}}</option> 
+            @endforeach
+           
         </select>
         </div>
 
@@ -61,6 +63,13 @@
     </div>
 
     
+    </form>
+
+    <form action="/cargarProducto" method="POST">
+        @csrf
+        <input type="hidden" name="id" value="{{$producto->id}}">
+        <input type="submit" value="borrar Producto">
+
     </form>
 
 

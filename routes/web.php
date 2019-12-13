@@ -52,7 +52,7 @@ Route::get('/login', function () {
     return view('login');
 });
 */
-
+/*ESTO HAY QUE BORRARLO
 Route::get('/carrito', function () {
     return view('carrito');
 });
@@ -68,7 +68,7 @@ Route::get('/viajes', function () {
 Route::get('/actividades', function () {
     return view('actividades');
 });
-
+*/
 
 Auth::routes();
 

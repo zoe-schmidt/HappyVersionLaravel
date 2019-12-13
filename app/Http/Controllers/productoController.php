@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\producto;
+use App\categoria;
 
 class productoController extends Controller
 {
     
     public function iraCargarProducto(){
-        return view("cargarProducto");
+        $categorias=categoria::all();
+        
+        $vac=compact("categorias");
+
+        return view("cargarProducto",$vac);
     }
 
     public function mostrarProducto($id){
@@ -52,5 +57,12 @@ class productoController extends Controller
         $nuevoProducto->save();
 
         return redirect("/");
+    }
+
+    public function borrarProducto(request $form){
+        $id=$form["id"];
+        $producto=producto::find($id);
+
+        $producto->delete();
     }
 }

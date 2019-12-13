@@ -54,7 +54,11 @@ class HomeController extends Controller
     }
 
     public function irAGastronomia(){
-        return view("home/gastronomia");
+        $productos=producto::orderBy('idCategoria')->get();
+
+        $vac=compact("productos");
+
+        return view("home/gastronomia",$vac);
     }
 
     public function irAActividades(){
