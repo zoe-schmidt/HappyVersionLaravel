@@ -98,8 +98,15 @@ class RegisterController extends Controller
     }
 
     public function redigir (array $holi){
-      if (isset ($holi['submit'])){
+
+      if (isset ($holi['#boton-enviar.submit'])){
       return view("home");
       }
+
+
+    /*  if (!$data == null) {
+        return view("home");
+      }
+      */
     }
 }

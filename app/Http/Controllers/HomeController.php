@@ -68,5 +68,9 @@ class HomeController extends Controller
         return view("/auth/register");
     }
 
+    public function irACarrito(){
+        return view("carrito");
+    }
+
 
 }

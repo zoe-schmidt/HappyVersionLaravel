@@ -32,6 +32,8 @@ Route::post('/register', "RegisterController@redirigir");
 
 Route::post('/actividades', "HomeController@irAActividades");
 
+Route::get('/carrito', "HomeController@irACarrito");
+
 
 
 
