@@ -35,13 +35,14 @@
       <div class="login-compras">
         <div class="usuario">
         <ul>
-          <?php if(isset($_SESSION["email"])){?>
+          @guest
+            <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
+            <a href="/login"><i class="fas fa-user"></i></a>
+
+        @else
           <a href="/profile"><i class="fas fa-user"></i></a>
-          <a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
-          <?php }else{ ?>
-          <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
-          <a href="/login"><i class="fas fa-user"></i></a>
-          <?php } ?>
+          <a href="/logout"  onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i></a></li>
+        @endguest
         </ul>
 
         </div>
@@ -57,15 +58,18 @@
 
       <div class="login-escritorio">
         <ul>
-        <?php if(isset($_SESSION["email"])){?>
-          <li><a class="link" href="/logout">cerrar sesión</a></li>
-          <li><a class="link" href="/profile"> Mi Perfil</a></li>
-          <?php }else{ ?>
+        @guest
           <li><a class ="link" href="/login">Login</a></li>
           <li><a class= "link"href="/register">Registrarse</a></li>
-          <?php } ?>
+        @else
+          <li><a class="link" href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">cerrar sesión</a></li>
+          <li><a class="link" href="/profile"> Mi Perfil</a></li>
+        @endguest
         </ul>
       </div>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+      </form>
 </header>
 
  <section class="menu-mobile">

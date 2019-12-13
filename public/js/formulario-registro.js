@@ -10,7 +10,6 @@ window.onload=function(){
 
 
    formulario.onsubmit=function(event){
-    event.preventDefault();
           var elementos=this.elements;
 
         for(var element of elementos){
@@ -24,7 +23,7 @@ window.onload=function(){
             }else if(element.name == 'email' && !regxmail.test(element.value)){
                 console.log(regxmail.test(element.value));
                 event.preventDefault();
-                alert("no es mail tu vieja");
+                alert("no es mail");
             }
             if(element.name == 'password' && element.value.trim()==' '){
                 event.preventDefault();

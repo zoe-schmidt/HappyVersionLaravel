@@ -35,13 +35,13 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    /*
+
     public function __construct()
     {
         $this->middleware('guest');
 
     }
-*/
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -96,10 +96,17 @@ class RegisterController extends Controller
     {
         return view('auth/register');
     }
-
-    public function redigir (array $holi){
-      if (isset ($holi['submit'])){
-      return view("home");
-      }
-    }
+    //
+    // public function redigir (array $holi){
+    //
+    //   if (isset ($holi['#boton-enviar.submit'])){
+    //   return view("home");
+    //   }
+    //
+    //
+    // /*  if (!$data == null) {
+    //     return view("home");
+    //   }
+    //   */
+    // }
 }
