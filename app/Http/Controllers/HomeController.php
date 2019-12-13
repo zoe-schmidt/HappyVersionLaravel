@@ -38,11 +38,7 @@ class HomeController extends Controller
     }
 
     public function irAHome(){
-        $productos=producto::orderBy('nombre')->get();
-
-        $vac=compact("productos");
-
-        return view("home/index",$vac);
+        return view("home/index");
     }
 
     public function irAContacto(){
@@ -54,19 +50,19 @@ class HomeController extends Controller
     }
 
     public function irAGastronomia(){
-        $productos=producto::orderBy('idCategoria')->get();
+       $productos=producto::all();
+       
+       $vac=compact("productos");
 
-        $vac=compact("productos");
-
-        return view("home/gastronomia",$vac);
+        return view("gastronomia",$vac);
     }
 
     public function irAActividades(){
-        return view("home/actividades");
+        return view("actividades");
     }
 
     public function irAViajes(){
-        return view("home/viajes");
+        return view("viajes");
     }
 
     public function irALogin(){

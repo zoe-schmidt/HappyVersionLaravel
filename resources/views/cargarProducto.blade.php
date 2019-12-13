@@ -28,7 +28,7 @@
         <select name="categoria" id="categoria">
 
             @foreach ($categorias as $categoria)
-            <option value="{{$categoria->id}}">{{$categoria->nombre}}</option> 
+            <option name="categoria" value="{{$categoria->id}}">{{$categoria->nombre}}</option> 
             @endforeach
            
         </select>
@@ -63,14 +63,7 @@
     </div>
 
     
-    </form>
-
-    <form action="/cargarProducto" method="POST">
-        @csrf
-        <input type="hidden" name="id" value="{{$producto->id}}">
-        <input type="submit" value="borrar Producto">
-
-    </form>
+</form>
 
 
 </div>

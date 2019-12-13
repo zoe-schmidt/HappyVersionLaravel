@@ -22,13 +22,13 @@ Route::get("/cargarProducto","productoController@iraCargarProducto");
 
 Route::get("/cargarProducto/{id}","productoController@mostrarProducto");
 
-route::post("/cargarProducto/{id}","productoController@agregarProducto");
+route::post("/cargarProducto","productoController@agregarProducto");
 
-Route::post('/gastronomia', "HomeController@irAGastronomia");
+Route::get('/gastronomia', "HomeController@irAGastronomia");
 
-Route::post('/viajes', "HomeController@irAViajes");
+Route::get('/viajes', "HomeController@irAViajes");
 
-Route::post('/actividades', "HomeController@irAActividades");
+Route::get('/actividades', "HomeController@irAActividades");
 
 Route::get('/carrito', "HomeController@irACarrito");
 

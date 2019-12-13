@@ -52,6 +52,7 @@ class productoController extends Controller
         $nuevoProducto->nombre=$form["nombre"];
         $nuevoProducto->descripcion=$form["descripcion"];
         $nuevoProducto->precio=$form["precio"];
+        $nuevoProducto->idcategoria=$form["categoria"];
         $nuevoProducto->imagen=$nombreArchivo; 
 
         $nuevoProducto->save();
@@ -59,10 +60,4 @@ class productoController extends Controller
         return redirect("/");
     }
 
-    public function borrarProducto(request $form){
-        $id=$form["id"];
-        $producto=producto::find($id);
-
-        $producto->delete();
-    }
 }
