@@ -32,13 +32,16 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-     public function index()
-    {
-        return view('home');
+     public function index(){
+    
+        return view ('home');
     }
 
     public function irAHome(){
-        return view("home/index");
+        $productos=producto::all();
+
+        $vac=compact("productos");
+        return view("home/index",$vac);
     }
 
     public function irAContacto(){
@@ -50,7 +53,7 @@ class HomeController extends Controller
     }
 
     public function irAGastronomia(){
-       $productos=producto::all();
+       $productos=producto::paginate(3);
 
        $vac=compact("productos");
 

@@ -17,8 +17,8 @@ class productoController extends Controller
         return view("cargarProducto",$vac);
     }
 
-    public function mostrarProducto($id){
-        $productos=producto::find($id);
+    public function mostrarProducto(){
+        $productos=producto::all();
 
         $vac=compact("productos");
 
@@ -58,6 +58,25 @@ class productoController extends Controller
         $nuevoProducto->save();
 
         return redirect("/");
+    }
+
+    public function irABorrarProducto(){
+        $productos=producto::all();
+
+        $vac=compact("productos");
+        
+        return view("/borrarProducto",$vac);
+    }
+
+    public function borrarProducto(request $form){
+        $id=$form["id"];
+
+        $productos=producto::find($id);
+
+        $productos->delete();
+
+        return redirect("/borrarProducto");
+
     }
 
 }

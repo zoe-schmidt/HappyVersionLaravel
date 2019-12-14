@@ -20,9 +20,15 @@ Route::get("/faq","HomeController@irAFaq");
 
 Route::get("/cargarProducto","productoController@iraCargarProducto");
 
-Route::get("/cargarProducto/{id}","productoController@mostrarProducto");
+//Route::get("/cargarProducto/{id}","productoController@mostrarProducto");//
 
 route::post("/cargarProducto","productoController@agregarProducto");
+
+route::get("/borrarProducto","productoController@irABorrarProducto");
+
+route::post("/borrarProducto","productoController@borrarProducto");
+
+route::post("/borrarProducto{id}","productoController@mostrarProducto");
 
 Route::get('/gastronomia', "HomeController@irAGastronomia");
 

@@ -51,24 +51,29 @@
         </div>
 
         <div class="productos">
+          
+              
           <div class="producto">
+              @foreach($productos as $producto)
 
               <div class="imagen-producto1">
-                <img id="cena-de-sushi-para-dos" src="/imagenes/sushi.png" alt="cena-de-sushi-para-dos">
+                <img id="cena-de-sushi-para-dos" src="/storage/{{$producto->imagen}}" alt="cena-de-sushi-para-dos">
               </div>
+
               <div class="corazon">
               <i class="fas fa-heart"></i>
               </div>
+
               <div class="titulo-Descripcion-Producto1">
                 <section id="producto1">
                     <article class="producto1">
-                      <div class="titulo-descripcion-producto1">
-                      <br>
-                      <p class="titulo-producto" >Cena de Sushi para dos</p>
-                      <br>
-                      <p class="descripcion-producto">Disfruta de una cena de sushi con tu pareja! Combo de piezas a elección! </p>
-                      <br>
-                      </div>
+                        <div class="titulo-descripcion-producto1">
+                        <br>
+                        <p class="titulo-producto" >{{$producto->nombre}}</p>
+                        <br>
+                        <p class="descripcion-producto">{{$producto->descripcion}} </p>
+                        <br>
+                        </div>
 
                       <div class="ver-mas">
                           <a href=""><p>VER MÁS</p></a>
@@ -79,10 +84,12 @@
                         </div>
                     </article>
               </section>
-            </div>
+              
+              </div>
+           @endforeach
           </div>
-
-            <div class="producto2">
+       
+           <!-- <div class="producto2">
               <div class="imagen-producto2">
                 <img id="salto-en-paracaidas" src="imagenes/parachute_1.png" alt="salto-en-paracaidas">
               </div>
@@ -132,8 +139,9 @@
               </article>
               </div>
             </div>
+            !-->
+      
         </div>
-
         <div class="kits-en-oferta">
           <h4>Kits en Oferta!</h4>
         </div>

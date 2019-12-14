@@ -96,6 +96,9 @@ text-align: center;
 text-align: center;
 }
 
+.paginador{
+  display: inline;
+}
 
 
 @media (min-width: 768px){
