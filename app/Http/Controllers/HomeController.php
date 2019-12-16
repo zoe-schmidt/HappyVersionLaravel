@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-       // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -38,7 +38,7 @@ class HomeController extends Controller
     }
 
     public function irAHome(){
-        $productos=producto::all();
+        $productos=producto::paginate(4);
 
         $vac=compact("productos");
         return view("home/index",$vac);

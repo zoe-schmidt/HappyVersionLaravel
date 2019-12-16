@@ -22,21 +22,19 @@
         </div>
         <div>
           <div class="contenedor-avatar">
+            <img src="/storage/{{auth::user()->avatar}}" alt="imagen-avatar">
+          
           </div>
+
         </div>
         <div class="padre-datos">
+
           <div class="datos">
-              <p>Nombre:</p>
+              <p>Nombre:"{{auth::user()->nombre}}"</p>
               <br>
-              <p>E-Mail:</p>
+              <p>E-Mail:"{{auth::user()->email}}"</p>
               <br>
               </div>
-          <div class="datos-rellenados">
-              <p></p>
-              <p> /* COMO TRAER LOS DATOS INGRESADOS?*/<p>
-              <br>
-              <p>/* COMO TRAER LOS DATOS INGRESADOS*/<p>
-          </div>
         </div>
       </main>
 

@@ -80,7 +80,7 @@ class RegisterController extends Controller
     {
       $imagen="";
       if (isset ($data['avatar'])){
-      $imagen=$data['avatar']->store['public'];
+      $imagen=$data['avatar']->store('public');
       $imagen=basename($imagen);
     }
         return User::create([
