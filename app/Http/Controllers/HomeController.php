@@ -75,8 +75,12 @@ class HomeController extends Controller
     public function irACarrito(){
         return view("carrito");
     }
+    
     public function irAPerfil(){
         return view("perfil");
     }
+
+   
+
 
 }

@@ -1,7 +1,6 @@
 
 @extends("plantilla")
 @section("main")
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,8 +24,11 @@
       <br>
       <section class="productos">
         <div class="producto1">
+          @forelse ($carritos as $producto)
+              
+        
         <div class="titulo-productos">
-              <h3>Visita Temaiken!</h3>
+              <h3>{{($producto->product()->get()->first()->nombre)}}</h3>
         </div>
         <div class="corazon">
         <i class="fas fa-heart"></i>
@@ -54,7 +56,9 @@
             </select>
             <input type="button" value="Comprar" class="comprar">
           </form>
-
+          @empty
+              
+          @endforelse
         </div>
 
       </section>

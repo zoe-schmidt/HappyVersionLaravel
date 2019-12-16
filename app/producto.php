@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use \App\User;
 
 class producto extends Model
 {   
@@ -10,5 +11,9 @@ class producto extends Model
 
     public function categoria(){
         return $this->belongsTo("App/categoria","idCategoria");
+    }
+
+    public function usuario(){
+        $this->belongsToMany(User::class,"Carrito","idUsuario","idProducto");
     }
 }

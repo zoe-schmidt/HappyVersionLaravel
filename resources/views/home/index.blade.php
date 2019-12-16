@@ -33,6 +33,7 @@
             <div class="carousel-item active">
               <img class="d-block w-100" src="/imagenes/carusel-viajes.jpg" alt="First slide">
             </div>
+            
             <div class="carousel-item">
               <img class="d-block w-100" src="/imagenes/dia-de-spa-en-pareja.jpg" alt="Second slide">
             </div>
@@ -72,7 +73,11 @@
                     </div>
     
                     <div class="ver-mas">
-                        <a href=""><p>VER MÁS</p></a>
+                      <form action="/carrito" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value={{$producto->id}}>
+                      <input type="submit" value="Agregar al Carrito">
+                    </form>
                       </div>
                      
                 </div>
@@ -222,9 +227,7 @@
                     <br>
                     <p class="descripcion-producto">Disfruta de una semana conociendo una de las maravillas del mundo! </p>
                     </div>
-                    <div class="ver-mas">
-                        <a href=""><p>VER MÁS</p></a>
-                      </div>
+                  
                 </article>
              </div>
              </div>

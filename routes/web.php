@@ -30,6 +30,10 @@ route::post("/borrarProducto","productoController@borrarProducto");
 
 route::post("/borrarProducto{id}","productoController@mostrarProducto");
 
+route::get("/carrito","HomeController@agregarAlCarrito");
+
+route::post("/carrito","ProductoController@agregarAlCarrito");
+
 Route::get('/gastronomia', "HomeController@irAGastronomia");
 
 Route::get('/viajes', "HomeController@irAViajes");

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\producto;
 use App\categoria;
+use App\user;
+use App\Carrito;
+use Illuminate\Support\Facades\Auth;
 
 class productoController extends Controller
 {
@@ -78,5 +81,48 @@ class productoController extends Controller
         return redirect("/borrarProducto");
 
     }
+
+    /*public function irACarrito(){
+
+        /*$id=$form["id"];
+        
+        $productos=producto::find($id);
+
+            $vac= compact("id");
+
+            return redirect("/carrito");
+        }*/
+    
+    public function agregarAlCarrito(request $form){
+        $user=auth::user();
+
+        if (isset($user)){
+
+            $id=$form["id"];
+
+            $productos=producto::find($id);
+            $contieneArticulo = Carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
+            
+            if($contieneArticulo->exists()){
+                $articulo = $contieneArticulo->get()->first();
+                $articulo->cantidad++;
+                $articulo->save();
+            }else{
+                $carrito = new Carrito();
+                $carrito->idProducto = $productos->id;
+                $carrito->idUsuario = Auth::user()->id;
+                $carrito->estadoCompra = 'Pendiente de pago';
+                $carrito->cantidad = 1;
+                $carrito->save();
+            }
+    
+            $carritos = Carrito::where('idUsuario',Auth::user()->id)->get();
+            return view("/carrito", compact('carritos'));
+        }
+        else {
+            return redirect("/login");
+        }
+    }
+
 
 }

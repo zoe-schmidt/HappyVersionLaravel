@@ -13,7 +13,7 @@
     <header>
 
       <div class="logo">
-        <a href="/"><img src="imagenes/logo_happy_final.png" alt="imagenes"></a>
+        <a href="/"><img src="imagenes/happy2.png" alt="imagenes"></a>
       </div>
 
 
