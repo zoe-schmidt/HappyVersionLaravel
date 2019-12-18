@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/fontawesome/css/all.css">
     <link rel="stylesheet" href="css/perfil.css">
 
-    <title>Document</title>
+    <title>perfil</title>
   </head>
   <body>
   <div class="contenedor">

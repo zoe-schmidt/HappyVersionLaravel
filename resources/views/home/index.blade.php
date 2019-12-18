@@ -227,6 +227,10 @@
                     <br>
                     <p class="descripcion-producto">Disfruta de una semana conociendo una de las maravillas del mundo! </p>
                     </div>
+                    <div class="ver-mas">
+                      <a href=""><p>VER MÁS</p></a>
+                    </div>
+
                   
                 </article>
              </div>

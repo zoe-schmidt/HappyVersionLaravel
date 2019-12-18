@@ -62,7 +62,7 @@
           <li><a class ="link" href="/login">Login</a></li>
           <li><a class= "link"href="/register">Registrarse</a></li>
         @else
-          <li><a class="link" href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">cerrar sesión</a></li>
+          <li><a class="link" href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión</a></li>
           <div class="datos-usuario">
             <li><a class="link" href="/perfil"> {{auth::user()->nombre}}</a></li>   
             <li><a class="link" href="/perfil"> <img src="/storage/{{auth::user()->avatar}}"  alt="perfil"></a></li>     
