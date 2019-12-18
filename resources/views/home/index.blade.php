@@ -23,6 +23,7 @@
           <h3 class="happy">Happy</h3>
         </div>
 
+
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -31,23 +32,23 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="/imagenes/carusel-viajes.jpg" alt="First slide">
+              <img id="imagenes-carrousel" class="d-block w-100" src="/imagenes/carusel-viajes.jpg" alt="First slide">
               <div class="texto-carrousel">
-                  <h3>Gastronomia</h3>
+                  <h3 id="Viajes">Viajes</h3>
                 </div>
             </div>
-                
+
             <div class="carousel-item">
-              <img class="d-block w-100" src="/imagenes/dia-de-spa-en-pareja.jpg" alt="Second slide">
+              <img id="imagenes-carrousel" class="d-block w-100" src="/imagenes/dia-de-spa-en-pareja.jpg" alt="Second slide">
               <div class="texto-carrousel">
-                  <h3>Actividades</h3>
+                  <h3 id="Actividades">Actividades</h3>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
-              <img class="d-block w-100" src="/imagenes/carusel-sushi.jpg" alt="Third slide">
+              <img id="imagenes-carrousel" class="d-block w-100" src="/imagenes/carusel-sushi.jpg" alt="Third slide">
               <div class="texto-carrousel">
-                  <h3>Gastronomia</h3>
+                  <h3 id="Gastronomia">Gastronomia</h3>
                 </div>
             </div>
           </div>
@@ -62,26 +63,29 @@
         </div>
 
 
+
+
+      </div>
             <div class="productos">
                 @csrf
-              
+
                 @forelse ($productos as $producto)
                <div class="producto1">
-                  
+
                   <div class="imagen-producto1">
                     <img id="cena-de-sushi-para-dos" src="/storage/{{$producto->imagen}}" alt="cena-de-sushi-para-dos">
                   </div>
-    
+
                     <div class="titulo-descripcion-producto">
                       <br>
                       <p class="titulo-producto" >{{$producto->nombre}}</p>
                       <br>
                       <p class="descripcion-producto">{{$producto->descripcion}} </p>
                       <br>
-                      <p class="precio">${{$producto->precio}}</p> 
+                      <p class="precio">${{$producto->precio}}</p>
                       <br>
                     </div>
-    
+
                     <div class="ver-mas">
                       <form action="/carrito" method="post">
                         @csrf
@@ -89,18 +93,18 @@
                       <input type="submit" value="Agregar al Carrito">
                     </form>
                       </div>
-                     
+
                 </div>
                     @empty
-                    @endforelse   
+                    @endforelse
               </div>
-      
+
 
         <div class="paginador">
             {{$productos->links()}}
           </div>
-         
-      
+
+
         </div>
         <div class="kits-en-oferta">
           <h4>Kits en Oferta!</h4>
@@ -130,7 +134,7 @@
                 </div>
               </article>
           </div>
-       
+
 
           <div class="productos">
             <div class="producto5">
@@ -153,7 +157,7 @@
                       <a href=""><p>VER MÁS</p></a>
                     </div>
 
-                  
+
                 </article>
              </div>
              </div>
