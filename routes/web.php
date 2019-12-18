@@ -38,10 +38,10 @@ Route::get('/viajes', "HomeController@irAViajes");
 
 Route::get('/actividades', "HomeController@irAActividades");
 
-Route::get('/carrito', "HomeController@irACarrito");
+Route::get('/carrito', "productoController@agregarAlCarrito");
 
 Route::get('/perfil', "HomeController@irAPerfil");
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('tu vieja');

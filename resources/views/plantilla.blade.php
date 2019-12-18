@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="/css/fontawesome/css/all.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
-  <title>home</title>
 </head>
   <body>
     <header>
