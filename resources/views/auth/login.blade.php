@@ -14,9 +14,11 @@
         <p>Usuario:</p>
         <input type="text" name="email" value="" id="email" placeholder="Complete el campo">
         <br>
+        <small class="error">
         @error('email')
-        <small class="error">{{$message}}</small>
+        {{$message}}
         @enderror
+        </small>
       </label>
       <br>
       <br>

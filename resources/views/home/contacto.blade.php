@@ -5,18 +5,18 @@
 <link rel="stylesheet" href="/css/contacto.css">
 
 <div class="contenedor-principal">
-    
+
             <main>
                 <section class="contacto-happy">
-                    
+
                     <br>
-                    
+
                     <article class="formulario-contacto">
-                        
-                        <div class="contacto-texto">   
+
+                        <div class="contacto-texto">
                             <h3 class="titulos-seccion">Contactanos:</h3 class="titulos-seccion">
                             </div>
-                                
+
                             <br>
 
                         <form action="">
@@ -24,7 +24,7 @@
                                 <label for="email" class="fuente-label">Email:</label>
                                 <input type="email" name="email" id="email"placeholder="ejemplo@email.com">
                             </p>
-                            
+
                             <br>
 
                             <p>
@@ -49,11 +49,11 @@
                         </form>
                     </article>
 
-                    
 
-                    
+
+
                 </section>
-                
+
                         <section class="mapa">
                                 <div class="texto-mapa">
                                     <h3 class="titulos-seccion">Nuestras Oficinas</h3 class="titulos-seccion">
@@ -70,15 +70,15 @@
                             </div>
                             <div class="lista-redes">
                                 <ul>
-                                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </section>
             </main>
 
-            
+
 </div>
 
 @endsection;

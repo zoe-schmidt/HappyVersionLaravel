@@ -17,13 +17,14 @@ window.onload=function(){
            }
             if(element.name == 'email' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'Completa el campo';
             }else if(element.name == 'email' && !regxmail.test(element.value)){
                 console.log(regxmail.test(element.value));
                 event.preventDefault();
-                alert("no es mail");
-            }
-            if(element.name == 'password' && element.value.trim()==' '){
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'Email invalido';
+            }else if(element.name == 'password' && element.value.trim()==' '){
                 event.preventDefault();
                 alert("el campo contraseña esta vacio");
             }else if (element.name == 'password' && !testpass.test(element.value)){

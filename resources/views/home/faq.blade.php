@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/faq.css">
 
 <div class="contenedor-principal">
-         
+
 
           <main>
 
@@ -26,8 +26,8 @@
                       <br>
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita in iste eligendi, quae suscipit quidem iure saepe laboriosam repellendus. Ipsam corporis praesentium, ipsa reiciendis officia optio illo quia cupiditate voluptatem.</p>
                   </article>
-                  
-                  
+
+
 
               <article class="preguntas-faq">
                   <h3 class="que-es-happy"> Medios de Pago</h3>
@@ -41,14 +41,14 @@
                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita in iste eligendi, quae suscipit quidem iure saepe laboriosam repellendus. Ipsam corporis praesentium, ipsa reiciendis officia optio illo quia cupiditate voluptatem.</p>
               </article>
 
-              
+
           </section>
-          
+
           <section class="duda">
               <h4 class="resolver-duda"> No pudimos resolver tu duda?     <br>
-                  <a href="contacto.php">Contactanos</a></h3>
+                  <a href="/contacto">Contactanos</a></h3>
           </section>
-             
+
           </main>
 
 
