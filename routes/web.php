@@ -20,8 +20,6 @@ Route::get("/faq","HomeController@irAFaq");
 
 Route::get("/cargarProducto","productoController@iraCargarProducto");
 
-//Route::get("/cargarProducto/{id}","productoController@mostrarProducto");//
-
 route::post("/cargarProducto","productoController@agregarProducto");
 
 route::get("/borrarProducto","productoController@irABorrarProducto");
@@ -43,44 +41,6 @@ Route::get('/actividades', "HomeController@irAActividades");
 Route::get('/carrito', "HomeController@irACarrito");
 
 Route::get('/perfil', "HomeController@irAPerfil");
-
-
-
-
-//Route::get('/auth/login', "HomeController@irALogin");
-
-//Route::get('/register', "HomeController@irARegistrate");
-
-//Route::post('/', "RegisterController@irARegistrate");
-
-//Route::get('/login', "LoginController@cargarLogin");
-
-/*
-Route::get('/registrate', function () {
-    return view('registrate');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-*/
-/*ESTO HAY QUE BORRARLO
-Route::get('/carrito', function () {
-    return view('carrito');
-});
-
-Route::get('/gastronomia', function () {
-    return view('gastronomia');
-});
-
-Route::get('/viajes', function () {
-    return view('viajes');
-});
-
-Route::get('/actividades', function () {
-    return view('actividades');
-});
-*/
 
 Auth::routes();
 
