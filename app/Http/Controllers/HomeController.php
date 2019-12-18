@@ -53,7 +53,7 @@ class HomeController extends Controller
     }
 
     public function irAGastronomia(){
-       $productos=producto::paginate(3);
+        $productos=producto::where("idCategoria", '=', 3)->paginate(3);;
 
        $vac=compact("productos");
 
