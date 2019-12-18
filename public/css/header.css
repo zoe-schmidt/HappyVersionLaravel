@@ -46,6 +46,7 @@ header{
 .login-compras{
     float: right;
     overflow: hidden;
+   
 
 
 }
@@ -55,6 +56,8 @@ header{
     margin-right: 5px
 
 }
+
+
 
 .fas.fa-user{
 
@@ -150,7 +153,8 @@ header{
       float:right;
       margin-right: 30px;
       display: inline-block;
-      padding-top: 15px;
+      padding-top: 10px;
+     
 
   }
 
@@ -161,6 +165,20 @@ header{
       padding-right: 20px;
       font-family: 'Comfortaa', cursive; 
   }
+
+  .datos-usuario{
+    display: inline-block;
+    
+    }
+    
+    .datos-usuario img{
+        width:45px; 
+        height:45px;
+        border-radius: 50%;
+       
+           
+        
+    }
   .link{
       color: white;
 

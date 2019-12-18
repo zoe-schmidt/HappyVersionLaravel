@@ -18,7 +18,7 @@
 
       <main>
         <div class="titulo">
-          <h1>Mi perfil</h1>
+          <h1>Mi Perfil</h1>
         </div>
         <div>
           <div class="contenedor-avatar">
@@ -30,9 +30,9 @@
         <div class="padre-datos">
 
           <div class="datos">
-              <p>Nombre:"{{auth::user()->nombre}}"</p>
+              <p> Nombre:{{auth::user()->nombre}}</p>
               <br>
-              <p>E-Mail:"{{auth::user()->email}}"</p>
+              <p>Email:{{auth::user()->email}}</p>
               <br>
               </div>
         </div>
