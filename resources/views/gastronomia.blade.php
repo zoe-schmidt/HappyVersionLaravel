@@ -4,7 +4,7 @@
 @section("main")
 
     <link rel="stylesheet" href="/css/gastronomia.css">
- 
+  
       <div class="titulo">
         <h1>GASTRONOMIA</h1>
           </div>

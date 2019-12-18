@@ -61,11 +61,20 @@ class HomeController extends Controller
     }
 
     public function irAActividades(){
-        return view("actividades");
+        $productos=producto::where("idCategoria", '=', 1)->paginate(3);;
+
+        $vac=compact("productos");
+ 
+         return view("actividades",$vac);
     }
 
     public function irAViajes(){
-        return view("viajes");
+        $productos=producto::where("idCategoria", '=', 2)->paginate(3);;
+
+        $vac=compact("productos");
+ 
+         return view("viajes",$vac);
+        
     }
 
     public function irALogin(){
