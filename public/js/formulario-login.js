@@ -26,10 +26,12 @@ window.onload=function(){
                 small.innerHTML = 'Email invalido';
             }else if(element.name == 'password' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo contraseña esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'Completa el campo';
             }else if (element.name == 'password' && !testpass.test(element.value)){
                 event.preventDefault();
-                alert("la contrasena debe tener al menos 3 caracteres");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'La contraseña debe tener al menos 3 caracteres';
             }
 
         }

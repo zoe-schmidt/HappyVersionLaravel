@@ -19,43 +19,51 @@ window.onload=function(){
            }
             if(element.name == 'email' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'Completa el campo';
             }else if(element.name == 'email' && !regxmail.test(element.value)){
-                console.log(regxmail.test(element.value));
                 event.preventDefault();
-                alert("no es mail");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'No es un email';
             }
             if(element.name == 'password' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo contraseña esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'El campo contrasena esta vacio';
             }else if (element.name == 'password' && !testpass.test(element.value)){
                 event.preventDefault();
-                alert("la contrasena debe tener al menos 3 caracteres");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'La contrasena debe tener al menos 3 caracteres';
             }
             if(element.name == 'password_confirmation' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo contraseña esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'El campo confirmar contrasena esta vacio';
             }
-            /* FALTA VALIDAR QUE LO INGRESADO POR PASSWORD CONFIRMATION Y LO INGRESADO POR PASSWORD SEAN IGUALES*/
-            /* else if(element.name == 'password_confirmation' && !testpass.test(element.value)){
+             else if(element.name == 'password_confirmation' && !testpass.test(element.value)){
                 event.preventDefault();
-                alert("la contrasena debe tener al menos 3 caracteres");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'Las contrasenas no coinciden';
             }
-            */
+
 
             if(element.name == 'nombre' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo nombre esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'El campo nombre esta vacio';
             } else if (element.name == 'nombre' && !testnombre.test(element.value)){
                 event.preventDefault();
-                alert("el nombre debe tener al menos 3 letras");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'El nombre debe tener al menos 3 letras';
             }
             if(element.name == 'apellido' && element.value.trim()==' '){
                 event.preventDefault();
-                alert("el campo nombre esta vacio");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'El campo apellido esta vacio';
             } else if (element.name == 'apellido' && !testapellido.test(element.value)){
                 event.preventDefault();
-                alert("el apellido debe tener al menos 3 letras");
+                var small = element.parentElement.querySelector('small.error');
+                small.innerHTML = 'El apellido debe tener al menos 3 letras';
             }
 
 

@@ -26,9 +26,11 @@
         <p>Contraseña:</p>
         <input type="password" name="password" value="" id="password" placeholder="Complete el campo">
         <br>
-        @error('password')
-        <small class="error">{{$message}}</small>
+        <small class="error">
+          @error('password')
+          {{$message}}
         @enderror
+        </small>
       </label>
       <br>
 

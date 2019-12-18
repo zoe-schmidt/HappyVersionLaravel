@@ -18,9 +18,13 @@
                   <p>Nombre:</p>
                   <input id="nombre" type="text" name="nombre" value="{{old('nombre')}}">
                   <br>
-                  @error('nombre')
-                  <small class="error">{{$message}}</small>
-                  @enderror
+
+                  <small class="error">
+                    @error('nombre')
+                    {{$message}}
+                    @enderror
+                  </small>
+
               </label>
             <br>
             <br>
@@ -28,9 +32,13 @@
                 <p>Apellido:</p>
                 <input id="apellido" type="text" name="apellido" value="{{old('apellido')}}">
                 <br>
-                @error("apellido")
-                <small class="error">{{$message}}</small>
-                @enderror
+
+                <small class="error">
+                  @error('apellido')
+                  {{$message}}
+                  @enderror
+                </small>
+
               </label>
             <br>
             <br>
@@ -38,9 +46,13 @@
                 <p>Email: </p>
                 <input type="email" name="email" value="{{old('email')}}">
                 <br>
-                @error('email')
-                <small class="error">{{$message}}</small>
-                @enderror
+
+                <small class="error">
+                  @error('email')
+                  {{$message}}
+                  @enderror
+                </small>
+
               </label>
             <br>
             <br>
@@ -48,9 +60,13 @@
                 <p>Contraseña:</p>
                 <input type="password" name="password" value="">
                 <br>
-                @error('password')
-                <small class="error">{{$message}}</small>
-                @enderror
+
+                <small class="error">
+                  @error('password')
+                  {{$message}}
+                  @enderror
+                </small>
+
               </label>
             <br>
             <br>
@@ -59,6 +75,13 @@
               <input type="password" name="password_confirmation" value="">
               <br>
 
+                  <small class="error">
+                    @error('password_confirmation')
+                      {{$message}}
+                    @enderror
+                  </small>
+
+              </label>
             <br>
             <br>
 
