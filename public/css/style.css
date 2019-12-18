@@ -91,6 +91,22 @@ div .happy {
     max-height: 500px;
     overflow: hidden;}
 
+    .carrousel-item-active{
+      height: 100%;
+    }
+    .carrousel-inner{
+      position: relative;
+    }
+
+    .texto-carrousel{
+      position: absolute;
+      bottom: 0;
+    }
+
+    .texto-carrousel h3{
+      color: white;
+    }
+
  .productos{
   margin-top: 18px;
   text-align: center;

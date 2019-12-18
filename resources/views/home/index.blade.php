@@ -32,13 +32,23 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="/imagenes/carusel-viajes.jpg" alt="First slide">
+              <div class="texto-carrousel">
+                  <h3>Gastronomia</h3>
+                </div>
+            </div>
+                
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/imagenes/dia-de-spa-en-pareja.jpg" alt="Second slide">
+              <div class="texto-carrousel">
+                  <h3>Actividades</h3>
+                </div>
             </div>
             
             <div class="carousel-item">
-              <img class="d-block w-100" src="/imagenes/dia-de-spa-en-pareja.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
               <img class="d-block w-100" src="/imagenes/carusel-sushi.jpg" alt="Third slide">
+              <div class="texto-carrousel">
+                  <h3>Gastronomia</h3>
+                </div>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
