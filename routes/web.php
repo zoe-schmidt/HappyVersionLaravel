@@ -18,15 +18,15 @@ Route::get('/contacto',"HomeController@irAContacto");
 
 Route::get("/faq","HomeController@irAFaq");
 
-Route::get("/cargarProducto","productoController@iraCargarProducto");
+Route::get("/cargarProducto","productoController@iraCargarProducto")->middleware("admin");
 
-route::post("/cargarProducto","productoController@agregarProducto");
+route::post("/cargarProducto","productoController@agregarProducto")->middleware("admin");;
 
-route::get("/borrarProducto","productoController@irABorrarProducto");
+route::get("/borrarProducto","productoController@irABorrarProducto")->middleware("admin");
 
-route::post("/borrarProducto","productoController@borrarProducto");
+route::post("/borrarProducto","productoController@borrarProducto")->middleware("admin");;
 
-route::post("/borrarProducto{id}","productoController@mostrarProducto");
+route::post("/borrarProducto{id}","productoController@mostrarProducto")->middleware("admin");;
 
 route::get("/carrito","HomeController@agregarAlCarrito");
 
