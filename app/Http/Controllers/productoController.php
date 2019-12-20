@@ -64,7 +64,7 @@ class productoController extends Controller
     }
 
     public function irABorrarProducto(){
-        $productos=producto::all();
+        $productos=producto::paginate(4);
 
         $vac=compact("productos");
         
@@ -81,25 +81,24 @@ class productoController extends Controller
         return redirect("/borrarProducto");
 
     }
+/*
+     public function irACarrito(){
 
-    /*public function irACarrito(){
-
-        /*$id=$form["id"];
+        $id=$form["id"];
         
         $productos=producto::find($id);
 
             $vac= compact("id");
 
             return redirect("/carrito");
-        }*/
-    
+        }
+    */
     public function agregarAlCarrito(request $form){
         $user=auth::user();
 
         if (isset($user)){
 
             $id=$form["id"];
-
             $productos=producto::find($id);
             $contieneArticulo = Carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
             
@@ -108,21 +107,40 @@ class productoController extends Controller
                 $articulo->cantidad++;
                 $articulo->save();
             }else{
-                $carrito = new Carrito();
-                $carrito->idProducto = $productos->id;
-                $carrito->idUsuario = Auth::user()->id;
-                $carrito->estadoCompra = 'Pendiente de pago';
-                $carrito->cantidad = 1;
-                $carrito->save();
+                    $carrito = new Carrito();
+                    $carrito->idProducto = $productos->id;
+                    $carrito->idUsuario = Auth::user()->id;
+                    $carrito->estadoCompra = 'Pendiente de pago';
+                    $carrito->cantidad = 1;
+                    $carrito->save();
             }
     
-            $carritos = Carrito::where('idUsuario',Auth::user()->id)->get();
+            $carritos = Auth::user()->productos()->get();
             return view("/carrito", compact('carritos'));
+          
         }
         else {
             return redirect("/login");
         }
     }
 
+    public function mostrarCarrito(){
+        if(\Auth::check()){
+            $carritos = Auth::user()->productos()->get();
+            return view("/carrito", compact('carritos'));
+        }else{
+            return redirect('/');
+        }
+    }
+
+    public function borrarCarrito(request $form){
+        $id=$form["idProducto"];
+
+        $carrito = Carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
+        $carrito->delete();
+
+        return redirect("/carrito");
+
+    }
 
 }

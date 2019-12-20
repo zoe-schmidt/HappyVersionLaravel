@@ -1,14 +1,10 @@
 @extends('plantilla')
 
 @section('main')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/registrate.css">
-  </head>
-  <body>
+ 
     <div class="container">
       <div class="registro">
             <h1>Registrate!</h1>

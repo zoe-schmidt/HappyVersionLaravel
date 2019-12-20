@@ -63,7 +63,6 @@ text-align: center;
   font-weight: bold;
 }
 .ver-mas {
-  background-color: black;
   color:white;
   text-align: center;
   width: 200px;
@@ -115,17 +114,6 @@ text-align: center;
 
 @media (min-width: 1024px){
 
-  .login-escritorio{
-      float:right;
-      margin-right: 30px;
-      display: inline-block;
-      padding-top: 6px;
-  }
-  .login-escritorio li{
-      display: inline;
-      font-size: 20px;
-      padding-right: 20px;
-  }
   .link{
       color: white;
 

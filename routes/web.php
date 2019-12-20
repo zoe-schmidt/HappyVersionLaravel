@@ -20,15 +20,16 @@ Route::get("/faq","HomeController@irAFaq");
 
 Route::get("/cargarProducto","productoController@iraCargarProducto")->middleware("admin");
 
-route::post("/cargarProducto","productoController@agregarProducto")->middleware("admin");;
+route::post("/cargarProducto","productoController@agregarProducto")->middleware("admin");
 
 route::get("/borrarProducto","productoController@irABorrarProducto")->middleware("admin");
 
-route::post("/borrarProducto","productoController@borrarProducto")->middleware("admin");;
+route::post("/borrarProducto","productoController@borrarProducto")->middleware("admin");
 
-route::post("/borrarProducto{id}","productoController@mostrarProducto")->middleware("admin");;
+route::post("/borrarProducto{id}","productoController@mostrarProducto")->middleware("admin");
 
-route::get("/carrito","HomeController@agregarAlCarrito");
+route::post("/borrarCarrito","productoController@borrarCarrito");
+
 
 route::post("/carrito","ProductoController@agregarAlCarrito");
 
@@ -38,7 +39,7 @@ Route::get('/viajes', "HomeController@irAViajes");
 
 Route::get('/actividades', "HomeController@irAActividades");
 
-Route::get('/carrito', "productoController@agregarAlCarrito");
+Route::get('/carrito', "productoController@mostrarCarrito");
 
 Route::get('/perfil', "HomeController@irAPerfil");
 

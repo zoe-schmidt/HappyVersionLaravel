@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="/css/perfil.css">
 
     <title>perfil</title>
   </head>

@@ -80,10 +80,6 @@ class HomeController extends Controller
     public function irALogin(){
         return view("/auth/login");
     }
-
-    public function irACarrito(){
-        return view("carrito");
-    }
     
     public function irAPerfil(){
         return view("perfil");

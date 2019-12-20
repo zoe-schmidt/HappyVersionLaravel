@@ -1,7 +1,7 @@
 @extends("plantilla")
 
 @section("main")
-
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/contacto.css">
 
 <div class="contenedor-principal">
@@ -81,4 +81,4 @@
 
 </div>
 
-@endsection;
+@endsection

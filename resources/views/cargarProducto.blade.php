@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section("main")
-
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/formulario-producto.css">
 <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
 

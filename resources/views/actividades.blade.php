@@ -1,10 +1,12 @@
 @extends("plantilla")
 @section("main")
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/fontawesome/css/all.css">
 <link rel="stylesheet" href="css/actividades.css">
     
 <div class="titulo">
-    <h1>Actividades</h1>
+    <h1>ACTIVIDADES</h1>
       </div>
 
     <div class="busqueda">
@@ -36,9 +38,15 @@
                 <br>
             </div>
 
+           
             <div class="ver-mas">
-                <a href=""><p>VER MÁS</p></a>
-              </div>
+              <form action="/carrito" method="post">
+                @csrf
+                <input type="hidden" name="id" value={{$producto->id}}>
+                <button type="submit" class="btn btn-secondary">Agregar al Carrito</button>
+              </form>
+            </form>
+          </div>
              
         </div>
        

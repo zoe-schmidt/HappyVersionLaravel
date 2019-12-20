@@ -1,8 +1,10 @@
 @extends("plantilla")
 
 @section("main")
-
-    <link rel="stylesheet" href="/css/faq.css">
+    
+<link rel="stylesheet" href="/css/faq.css">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    
 
 <div class="contenedor-principal">
 

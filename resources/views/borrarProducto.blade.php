@@ -1,7 +1,8 @@
 @extends('plantilla')
 
 @section("main")
-<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/borrarProducto.css">
         
             <div class="productos">
@@ -30,15 +31,17 @@
                     <form action="/borrarProducto" method="post">
                     @csrf
                     <input type="hidden" name="id" value="{{$producto->id}}">
-                    <input type="submit" value="Borrar Producto">
+                    <button type="submit" class="btn btn-danger">Borrar</button>
                 </form>
 
                 </div>
+                
                 @empty
                 @endforelse 
                 
        
          </div>
+         {{$productos->links()}}
 </body>
 
 @endsection

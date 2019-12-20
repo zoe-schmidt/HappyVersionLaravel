@@ -18,8 +18,6 @@
 
 .footer-faq {
   text-align: center;
-  font-family: 'Comfortaa', cursive;
-  border-bottom: 1px solid white;
 }
 
 .footer-faq a{
@@ -30,7 +28,6 @@
 
 .contacto{
  text-align: center;
- border-bottom: 1px solid white;
 }
 
 .contacto p a{
@@ -48,7 +45,7 @@
 margin-left: 5px;
 margin-top: 15px;
 float: left;
-font-family: 'Comfortaa', cursive;
+
 }
 
 .footer-faq a{

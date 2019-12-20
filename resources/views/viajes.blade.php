@@ -1,16 +1,16 @@
 @extends("plantilla")
 @section("main")
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/viajes.css">
 <div class="contenedor">
 
 
 
-  <main>
     <div class="titulo">
       <h1>VIAJES</h1>
       </div>
-    </section>
+   
     <div class="busqueda">
       <div class="lupa">
         <i class="fas fa-search"></i>
@@ -19,6 +19,7 @@
         <input type="search" class="buscar" placeholder="Descubrí tu Próxima Aventura">
       </form>
     </div>
+
     <div class="productos">
         @csrf
       
@@ -39,17 +40,22 @@
                 <br>
             </div>
 
+          
             <div class="ver-mas">
-                <a href=""><p>VER MÁS</p></a>
-              </div>
-             
-        </div>
-       
-            @empty
-            @endforelse    
-           
-
+              <form action="/carrito" method="post">
+                @csrf
+                <input type="hidden" name="id" value={{$producto->id}}>
+                <button type="submit" class="btn btn-secondary">Agregar al Carrito</button>
+            </form>
           </div>
+
+            
+           
+          
+          </div>
+          @empty
+          @endforelse  
+        </div>
            
           {{$productos->links()}}
 

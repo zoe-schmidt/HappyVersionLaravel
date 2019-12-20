@@ -39,7 +39,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function producto(){
-        $this->belongsToMany(producto::class,"Carrito","idProducto",'idUsuario');
+    public function productos(){
+       return $this->belongsToMany(producto::class,"carritos","idUsuario",'idProducto')->withPivot('cantidad','estadoCompra');
     }
 }

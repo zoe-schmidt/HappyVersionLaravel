@@ -1,9 +1,10 @@
 
 @extends("plantilla")
 @section("main")
-  <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/carrito.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
   
   <div class="contenedor-principal">
 
@@ -17,34 +18,51 @@
         @forelse ($carritos as $producto)
         
         <div class="producto1">
-        
-          <div class="titulo-productos">
-                <h3>{{($producto->product()->get()->first()->nombre)}}</h3>
+          
+          <div class="imagen-producto">
+            <img src="/storage/{{$producto->imagen}}" width="300px" alt="temaiken">
           </div>
 
-            <div class="imagen-producto">
-              <img src="/storage/{{$producto->product()->get()->first()->imagen}}" width="300px" alt="temaiken">
-            </div>
-            <div class="descripcion-producto">
-              <p>{{$producto->product()->get()->first()->descripcion}}</p>
-            </div>
-            <form action="comprar.php" metod="GET">
-              <label for="cantidad" class="cantidad">
-                Cantidad
-              </label>
-            <select name="cantidad" id="cantidades">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
+          <div class="texto-producto">
+              <div class="titulo-productos">
+                    <h3>{{($producto->nombre)}}</h3>
+              </div>
+              
+              <div class="descripcion-producto">
+                <p>{{$producto->descripcion}}</p>
+              </div>
 
-            </select>
-            <input type="button" value="Comprar" class="comprar">
-          </form>
+              <div class="estado">
+                <label for="estadoCompra" class="cantidad">
+                  <p>{{$producto->pivot->estadoCompra}}</p>
+                  </label>
+              </div>  
+
+              <div class="comprar">
+                <p>valor <br>${{$producto->precio}}</p>
+              </div>
+
+              <div class="cantidad">
+                <form action="comprar.php" metod="GET">
+                  <label for="cantidad" class="cantidad">
+                  <p>Cantidad {{$producto->pivot->cantidad}}</p>
+                  </label>
+                </form>
+              </div>
+
+              <div class="comprar">
+                  <button type="button" class="btn btn-secondary">Comprar</button>
+              </div>
+
+              <div class="borrar">
+                <form  action="borrarCarrito" method="post">
+                  @csrf
+                <input type="hidden" name="idProducto" value="{{$producto->id}}">
+                <button type="submit" class="btn btn-danger">Borrar</button>
+                </form>
+              </div>
+        </div>
+        
      
         </div>
         

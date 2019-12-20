@@ -125,6 +125,7 @@ header{
     padding:10px;
     font-size: 20px;
     color:white;
+    font-family: 'Comfortaa', cursive;
    
   }
   .listaDeProductosLaptop li a{
@@ -137,7 +138,7 @@ header{
   }
 
   .logo img{
-      margin-top: 15px;
+      margin-top: 10px;
   }
   .hamburguesa{
       display: none;
@@ -153,7 +154,7 @@ header{
       float:right;
       margin-right: 30px;
       display: inline-block;
-      padding-top: 10px;
+      padding-top: 6px;
      
 
   }
@@ -163,6 +164,8 @@ header{
       display: inline;
       font-size: 20px;
       padding-right: 20px;
+      font-family: 'Comfortaa', cursive;
+      text-decoration: none;
      
   }
 
@@ -187,6 +190,8 @@ header{
   .link a{
     color: white;
   }
+
+ 
 
   .fas.fa-shopping-cart{
       margin-top: 14px;

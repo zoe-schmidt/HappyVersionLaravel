@@ -3,6 +3,7 @@
 @extends('plantilla')
 
 @section('main')
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/login.css">
 <div class="formulario-ingreso">
     <form class="formulario-ingreso" id="formulario-ingreso" action='/login' method="post">
@@ -46,7 +47,7 @@
       <div class= "texto-nuevo">
         <p>¿Eres nuevo?
           <br>
-          <a href="registrate.php">Registrate</a></p>
+          <a href="/register">Registrate</a></p>
       </div>
 
       </div>

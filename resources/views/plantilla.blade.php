@@ -54,17 +54,22 @@
 
        <!--HEADER EN ESCRITORIO-->
 
-
+      
       <div class="login-escritorio">
         <ul>
         @guest
           <li><a class ="link" href="/login">Login</a></li>
           <li><a class= "link"href="/register">Registrarse</a></li>
+         
         @else
           <li><a class="link" href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión</a></li>
           <div class="datos-usuario">
             <li><a class="link" href="/perfil"> {{auth::user()->nombre}}</a></li>   
-            <li><a class="link" href="/perfil"> <img src="/storage/{{auth::user()->avatar}}"  alt="perfil"></a></li>     
+            <li><a class="link" href="/perfil"> <img src="/storage/{{auth::user()->avatar}}"  alt="perfil"></a></li>   
+            @if(auth::user()->administrador==1)
+            <li><a class ="link" href="/cargarProducto">Cargar Producto</a></li>
+            <li><a class= "link"href="/borrarProducto">Borrar Producto</a></li>
+            @endif  
           </div>
         @endguest
         </ul>
