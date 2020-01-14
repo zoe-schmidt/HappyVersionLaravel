@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carrito extends Model
 {
-    public $table = 'Carritos';
+    public $table = 'carritos';
     public $guarded = [];
 
 
