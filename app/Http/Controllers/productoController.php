@@ -100,14 +100,14 @@ class productoController extends Controller
 
             $id=$form["id"];
             $productos=producto::find($id);
-            $contieneArticulo = Carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
+            $contieneArticulo = carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
             
             if($contieneArticulo->exists()){
                 $articulo = $contieneArticulo->get()->first();
                 $articulo->cantidad++;
                 $articulo->save();
             }else{
-                    $carrito = new Carrito();
+                    $carrito = new carrito();
                     $carrito->idProducto = $productos->id;
                     $carrito->idUsuario = Auth::user()->id;
                     $carrito->estadoCompra = 'Pendiente de pago';
@@ -136,7 +136,7 @@ class productoController extends Controller
     public function borrarCarrito(request $form){
         $id=$form["idProducto"];
 
-        $carrito = Carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
+        $carrito = carrito::where('idUsuario',Auth::user()->id)->where('idProducto',$id);
         $carrito->delete();
 
         return redirect("/carrito");
