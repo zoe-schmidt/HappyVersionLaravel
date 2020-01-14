@@ -31,7 +31,7 @@ route::post("/borrarProducto{id}","productoController@mostrarProducto")->middlew
 route::post("/borrarCarrito","productoController@borrarCarrito");
 
 
-route::post("/carrito","ProductoController@agregarAlCarrito");
+route::post("/carrito","productoController@agregarAlCarrito");
 
 Route::get('/gastronomia', "HomeController@irAGastronomia");
 
